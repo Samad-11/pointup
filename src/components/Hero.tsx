@@ -47,7 +47,7 @@ const Hero = () => {
                 </div>
 
 
-                <div className='flex-1 flex justify-center sm:px-10 px-5 max-sm:pt-20d '>
+                <div className='flex-1 flex justify-center sm:px-10 px-5 max-sm:pt-20'>
                     <div className='self-end max-w-sm '>
 
                         <p className="text-2xl max-sm:max-w-xs sm:text-3xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8">
