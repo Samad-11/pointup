@@ -40,7 +40,7 @@ const WorkStep = () => {
         },
     ]
     return (
-        <div className="h-[30rem]  w-full carousel carousel-vertical carousel-start rounded-box">
+        <div className="h-[50rem] sm:h-[30rem]  w-full carousel carousel-vertical carousel-start rounded-box">
             {
                 stepsContent.map(({ description, image, title }, indx) => (
                     <Step key={indx} description={description} title={title} image={image} sno={indx + 1} />
@@ -60,42 +60,47 @@ const Step = ({ title, description, image, sno }: { title: string, description: 
             {
                 isEven(sno) ?
                     <>
-                        <div className='flex-1  flex flex-col font-kalam'>
-                            <h4 className='font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 tracking-wide text-5xl pb-5 text-left'>
+                        <div className='flex-1  flex flex-col items-end font-kalam z-20 relative'>
+                            <Image src={image} alt='test' width={400} height={400} className='sm:hidden absolute -z-10 top-52 
+                             size-72
+                            '></Image>
+
+                            <h4 className='font-bold  z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 tracking-wide text-2xl sm:text-5xl pb-5 text-left'>
                                 <span className='text-6xl'>{sno}.</span>
                                 {title}
                             </h4>
                             <p className='text-gray-300
-                text-lg font-semibold
+                sm:text-lg text-sm font-semibold
                 '>{description}</p>
-                            <div className='justify-self-end self-end'>
+                            <div className='justify-self-end self-end max-sm:hidden'>
 
                                 <PiArrowArcLeftLight fill='white'
                                     className='text-9xl rotate-180'
                                 />
                             </div>
                         </div>
-                        <div className="flex-1 flex  justify-center items-center">
+                        <div className="flex-1 flex  justify-center items-center max-sm:hidden">
                             <Image src={image} alt='test' width={400} height={400}></Image>
                         </div>
                     </>
                     :
                     <>
-                        <div className="flex-1 flex  justify-center items-center">
+
+                        <div className="flex-1 flex  justify-center items-center max-sm:hidden">
                             <Image src={image} alt='test' width={400} height={400}></Image>
                         </div>
-                        <div className='flex-1  flex flex-col items-end font-kalam'>
-                            <h4 className='font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 tracking-wide text-right text-5xl pb-5'>
-                                <span className='text-6xl'>
-                                    {sno}.
-                                </span>
+                        <div className='flex-1  flex flex-col items-end font-kalam z-20 relative'>
+                            <Image src={image} alt='test' width={400} height={400} className='sm:hidden absolute -z-10 top-52
+                            size-72
+                            '></Image>
+                            <h4 className='font-bold  z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 tracking-wide text-2xl sm:text-5xl pb-5 text-left'>
+                                <span className='text-6xl'>{sno}.</span>
                                 {title}
                             </h4>
                             <p className='text-gray-300
-                            text-right
-                text-lg font-semibold
+                sm:text-lg text-sm font-semibold
                 '>{description}</p>
-                            <div className='justify-self-end self-start'>
+                            <div className='justify-self-end self-start max-sm:hidden'>
 
                                 <PiArrowArcRightLight fill='white'
                                     className='text-9xl rotate-180'

@@ -7,7 +7,7 @@ import { VscWorkspaceTrusted } from 'react-icons/vsc'
 import { GrTransaction } from 'react-icons/gr'
 import { FaLongArrowAltRight } from 'react-icons/fa'
 import { Spotlight } from './Spotlight'
-
+import logo from '../../public/images/logo/bgRemoveLogo.png'
 const Hero = () => {
     const people = [
         {
@@ -33,63 +33,76 @@ const Hero = () => {
         },
     ]
     return (
-        <div className="h-screen w-full bg-black bg  bg-grid-white/[0.2] relative flex items-center justify-center px-10">
+        <div className="min-h-screen w-full bg-black bg  bg-grid-white/[0.2] relative 
+        ">
             <Spotlight
-                className="-top-40 left-0 md:left-60 md:-top-10"
+                className="-top-20 left-0 md:left-60 md:-top-10"
                 fill="#d1ab38"
             />
-            {/* Radial gradient for the container to give a faded look */}
             <div className=" absolute pointer-events-none inset-0 flex items-center justify-center bg-black  [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
-            {/* <p className="text-4xl sm:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8">
-                Backgrounds
-            </p> */}
-            <div className='flex-1 flex justify-center px-10 '>
-                <div className='self-end max-w-sm '>
+            <div className='flex  items-center justify-center sm:px-10 border h-screen
+        max-sm:flex-col'>
+                <div className='absolute top-3 left-4 sm:hidden'>
+                    <Image src={logo} alt='Logo' height={60} width={60} />
+                </div>
 
-                    <p className="text-4xl sm:text-3xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8">
-                        Unlock reward and discover the perfect credit card for you
-                    </p>
-                    <p className='text-primary py-2'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo excepturi mollitia voluptatibus molestiae modi qui natus quam, consequatur nobis, maiores reprehenderit</p>
 
-                    <div className='mb-8 mt-5 flex justify-between'>
-                        <button className="border font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-10 py-1 rounded-full flex justify-center items-center gap-3">
-                            <span>Apply</span>
-                            <span><FaLongArrowAltRight size={26} /></span>
-                            <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-[#d1ab38] to-transparent  h-px" />
-                        </button>
-                        <div className='flex'>
-                            <AnimatedTooltip items={people} />
-                        </div>
-                    </div>
-                    <div className="stats shadow bg-transparent p-0">
+                <div className='flex-1 flex justify-center sm:px-10 px-5 max-sm:pt-20d '>
+                    <div className='self-end max-w-sm '>
 
-                        <div className="stat gap-[.5rem]">
-                            <div className="stat-figure text-primary ">
-                                {/* <GrTransaction className='size-10 text-white' fill='white' /> */}
-                            </div>
-                            <div className="stat-title font-bold text-primary">Transactions</div>
-                            <div className="stat-value stat-title font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 pb-2 flex gap-4">25.6K<GrTransaction className='size-10 text-white' fill='white' />
+                        <p className="text-2xl max-sm:max-w-xs sm:text-3xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8">
+                            Unlock reward and discover the perfect credit card for you
+                        </p>
+                        <p className='text-primary py-2 text-sm sm:text-base'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo excepturi mollitia voluptatibus molestiae modi qui natus quam, consequatur nobis, maiores reprehenderit</p>
+
+                        <div className='my-6 sm:mb-8 sm:mt-5 flex justify-between'>
+                            <button className="border font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white 
+                        
+                        px-5 sm:px-10 py-1 rounded-full flex justify-center items-center gap-3">
+                                <span>Apply</span>
+                                <span><FaLongArrowAltRight size={26} /></span>
+                                <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-[#d1ab38] to-transparent  h-px" />
+                            </button>
+                            <div className='flex'>
+                                <AnimatedTooltip items={people} />
                             </div>
                         </div>
-
-                        <div className="stat gap-[.5rem]">
-                            <div className="stat-figure text-secondary">
-                                {/* <VscWorkspaceTrusted className='size-10' fill='white' /> */}
-                            </div>
-                            <div className="stat-title font-bold text-primary">Trusted Users</div>
-                            <div className="stat-value stat-title font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 pb-2 flex gap-4">2.8K<VscWorkspaceTrusted className='size-10' fill='white' /></div>
-                        </div>
-
+                        <Stats />
                     </div>
                 </div>
-            </div>
-            <div className='flex-1 relative  h-full'>
-                <Image src={cardsImg} alt='cardImage' className="shadow-black shadow-lg absolute 
-                top-[50%] left-[50%] -translate-x-[50%] -translate-y-[40%]
+                <div className='flex-1 relative  h-full w-full'>
+                    <Image src={cardsImg} alt='cardImage' className="shadow-black shadow-lg absolute 
+                top-[50%] left-[50%] sm:-translate-x-[50%] -translate-x-[100%] sm:-translate-y-[40%] -translate-y-[60%]
                 " height={500} width={1000} />
+                </div>
             </div>
         </div>
     )
 }
 
 export default Hero
+
+
+const Stats = () => {
+    return (
+        <div className='flex w-full px-5 justify-between flex-wrap max-w-lg
+        font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500
+        font-kalam
+        '>
+            <div className='flex flex-col gap-2'>
+                <p className='text-primary text-sm tracking-wider'>Transactions</p>
+                <div className="flex font-bold text-4xl gap-4">
+                    <span>25.6K</span>
+                    <span className='text-white'><GrTransaction /></span>
+                </div>
+            </div>
+            <div className='flex flex-col gap-2'>
+                <p className='text-primary text-sm tracking-wider'>Trusted Users</p>
+                <div className="flex font-bold text-4xl gap-4">
+                    <span>2.8K</span>
+                    <span className='text-white'><VscWorkspaceTrusted /></span>
+                </div>
+            </div>
+        </div>
+    )
+}

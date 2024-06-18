@@ -7,8 +7,8 @@ import { BackgroundBeams } from './ui/BackgroundBeams'
 
 const HomeTestimonial = () => {
     return (
-        <div className='bg-black min-h-[150vh] relative'>
-            <div className='max-w-6xl  mx-auto'>
+        <div className='bg-black min-h-[120vh] relative'>
+            <div className='max-w-6xl  mx-auto py-8 max-sm:px-4'>
                 <h3 className='text-5xl flex items-center font-bold z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 pt-5 pb-8'>What our clients say</h3>
                 <TestimonialDivs />
             </div>
