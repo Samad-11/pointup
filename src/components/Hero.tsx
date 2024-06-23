@@ -43,34 +43,56 @@ const Hero = () => {
             <div className='flex  items-center justify-center sm:px-10 border h-screen
         max-sm:flex-col'>
                 <div className='absolute top-3 left-4 sm:hidden'>
-                    <Image src={logo} alt='Logo' height={60} width={60} />
+                    <Image src={logo} alt='Logo' height={80} width={80} />
                 </div>
 
 
                 <div className='flex-1 flex justify-center sm:px-10 px-5 max-sm:pt-20'>
                     <div className='self-end max-w-sm '>
 
-                        <p className="text-2xl max-sm:max-w-xs sm:text-3xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8">
+                        <p className="text-3xl max-sm:max-w-xs sm:text-3xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8">
                             Unlock reward and discover the perfect credit card for you
                         </p>
-                        <p className='text-primary py-2 text-sm sm:text-base'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo excepturi mollitia voluptatibus molestiae modi qui natus quam, consequatur nobis, maiores reprehenderit</p>
-
-                        <div className='my-6 sm:mb-8 sm:mt-5 flex justify-between'>
-                            <button className="border font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white 
+                        <p className='text-primary py-2 text-sm sm:text-base 
                         
-                        px-5 sm:px-10 py-1 rounded-full flex justify-center items-center gap-3">
+                        '>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo excepturi mollitia voluptatibus molestiae modi qui natus quam, consequatur nobis, maiores reprehenderit</p>
+                        <div className='my-6 sm:mb-8 sm:mt-5 flex justify-between max-sm:flex-col max-sm:gap-y-4 max-sm:pt-8'>
+                            <button className="border font-medium relative border-white/[0.2] text-black dark:text-white 
+                        px-5 sm:px-10 py-1 rounded-full flex justify-center items-center gap-3
+                        max-sm:border-[#d1ab38]
+                        ">
                                 <span>Apply</span>
                                 <span><FaLongArrowAltRight size={26} /></span>
                                 <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-[#d1ab38] to-transparent  h-px" />
                             </button>
-                            <div className='flex'>
-                                <AnimatedTooltip items={people} />
+                            <div className='flex justify-center items-center flex-row-reverse'>
+                                <div className='flex flex-1'>
+                                    <AnimatedTooltip items={people} />
+                                </div>
+                                <div className='sm:hidden flex-1'>
+                                    <Stats />
+                                </div>
                             </div>
                         </div>
-                        <Stats />
+                        <div className='max-sm:hidden'>
+                            <Stats />
+                        </div>
                     </div>
                 </div>
-                <div className='flex-1 relative  h-full w-full'>
+                <div className='flex-1 relative  h-full w-full  max-sm:relative sm:hidden'>
+                    <Image src={cardsImg} alt='cardImage' className="
+                        shadow-black shadow-lg 
+                        absolute
+                        object-contain
+                        right-0
+                        -top-5
+                    "
+
+                        width={300}
+                        height={300}
+                    />
+                </div>
+                <div className='flex-1 relative  h-full w-full max-sm:hidden'>
                     <Image src={cardsImg} alt='cardImage' className="shadow-black shadow-lg absolute 
                 top-[50%] left-[50%] sm:-translate-x-[50%] -translate-x-[100%] sm:-translate-y-[40%] -translate-y-[60%]
                 " height={500} width={1000} />
@@ -85,22 +107,27 @@ export default Hero
 
 const Stats = () => {
     return (
-        <div className='flex w-full px-5 justify-between flex-wrap max-w-lg
+        <div className='flex w-full px-5 justify-between max-w-lg
         font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500
         font-kalam
+        max-sm:pt-8
+        max-sm:flex-col
+        max-sm:justify-end 
+        max-sm:items-start
+        max-sm:gap-7
         '>
             <div className='flex flex-col gap-2'>
-                <p className='text-primary text-sm tracking-wider'>Transactions</p>
-                <div className="flex font-bold text-4xl gap-4">
+                <p className='text-primary text-sm max-sm:text-xs tracking-wider'>Transactions</p>
+                <div className="flex font-bold text-2xl sm:text-4xl gap-4 justify-between">
                     <span>25.6K</span>
                     <span className='text-white'><GrTransaction /></span>
                 </div>
             </div>
             <div className='flex flex-col gap-2'>
-                <p className='text-primary text-sm tracking-wider'>Trusted Users</p>
-                <div className="flex font-bold text-4xl gap-4">
+                <p className='text-primary text-sm max-sm:text-xs tracking-wider'>Trusted Users</p>
+                <div className="flex font-bold text-2xl sm:text-4xl gap-4 justify-between">
                     <span>2.8K</span>
-                    <span className='text-white'><VscWorkspaceTrusted /></span>
+                    <span className='text-white '><VscWorkspaceTrusted /></span>
                 </div>
             </div>
         </div>

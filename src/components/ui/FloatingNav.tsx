@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from '../../../public/images/logo/bgRemoveLogo.png'
 import {
     motion,
@@ -30,10 +30,14 @@ export const FloatingNav = ({
     const [visible, setVisible] = useState(true);
     const [bgBlack, setBgBlack] = useState(false)
 
+
     useMotionValueEvent(scrollYProgress, "change", (current) => {
         // Check if current is not undefined and is a number
+
         if (typeof current === "number") {
             let direction = current! - scrollYProgress.getPrevious()!;
+
+            console.log(scrollYProgress.get());
 
             if (scrollYProgress.get() == 0) {
                 setVisible(true);
@@ -47,7 +51,8 @@ export const FloatingNav = ({
                 if (direction < 0) {
                     setVisible(true);
                     setBgBlack(true)
-                } else {
+                }
+                else {
                     setVisible(false);
                 }
             }
@@ -56,7 +61,6 @@ export const FloatingNav = ({
 
     return (
         <>
-
             <AnimatePresence mode="wait">
                 <motion.div
                     initial={{
@@ -65,7 +69,9 @@ export const FloatingNav = ({
                     }}
                     animate={{
                         y: visible ? 0 : -100,
+
                         opacity: visible ? 1 : 0,
+
                     }}
                     transition={{
                         duration: 0.2,
@@ -105,7 +111,6 @@ export const FloatingNav = ({
                 </motion.div>
             </AnimatePresence>
             <MobileNav navItems={navItems} />
-
         </>
     );
 };
@@ -125,11 +130,11 @@ const MobileNav = ({
     return (
         <div className="drawer z-[999]">
             <input id="my-drawer" type="checkbox" className="drawer-toggle" />
-            <div className="drawer-content fixed top-3 right-3">
+            <div className="drawer-content fixed top-9 right-3">
                 {/* Page content here */}
                 <label htmlFor="my-drawer" className="sm:hidden drawer-button">
                     {
-                        isOpen ? <IoMdClose className="text-white text-2xl" /> : <IoMdMenu className="text-white text-2xl"
+                        isOpen ? <IoMdClose className="text-white text-4xl" /> : <IoMdMenu className="text-white text-4xl"
                             onClick={() => setIsOpen(true)}
                         />
                     }

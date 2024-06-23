@@ -32,7 +32,7 @@ export default function Home() {
   ]
   return (
 
-    <main className="h-[300vh] ">
+    <main className="min-h-[300vh] ">
       <FloatingNav navItems={navItems} className="navbar" />
       <Hero />
       <HowWeDo />

@@ -55,7 +55,8 @@ const Step = ({ title, description, image, sno }: { title: string, description: 
         <div className="carousel-item h-full
         px-5
         flex 
-        items-center
+        items-start
+        
         ">
             {
                 isEven(sno) ?
