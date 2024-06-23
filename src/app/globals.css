@@ -19,8 +19,11 @@
   }
 }
 
-.font-kalam {
+/* .font-kalam {
   font-family: var(--font-kalam);
+} */
+.font-fauna {
+  font-family: var(--font-fauna-one);
 }
 
 html,

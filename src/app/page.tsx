@@ -33,13 +33,13 @@ export default function Home() {
   return (
 
     <main className="min-h-[300vh] ">
-      <FloatingNav navItems={navItems} className="navbar" />
+      {/* <FloatingNav navItems={navItems} className="navbar" /> */}
       <Hero />
       <HowWeDo />
       <HomeService />
       <ParallaxBG />
       <HomeTestimonial />
-      <Footer />
+      {/* <Footer /> */}
     </main>
   )
 }

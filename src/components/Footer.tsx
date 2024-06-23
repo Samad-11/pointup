@@ -18,23 +18,23 @@ const FooterOne = () => {
         <footer className="footer p-10 pt-20 border-t-2 border-gray-500 bg-black text-white">
             <nav>
                 <h6 className="footer-title">Services</h6>
-                <Link href="" className="link link-hover">Branding</Link>
-                <Link href="" className="link link-hover">Design</Link>
-                <Link href="" className="link link-hover">Marketing</Link>
-                <Link href="" className="link link-hover">Advertisement</Link>
+                <Link href="" className="link link-hover font-fauna">Branding</Link>
+                <Link href="" className="link link-hover font-fauna">Design</Link>
+                <Link href="" className="link link-hover font-fauna">Marketing</Link>
+                <Link href="" className="link link-hover font-fauna">Advertisement</Link>
             </nav>
             <nav>
                 <h6 className="footer-title">Company</h6>
-                <Link href="" className="link link-hover">About us</Link>
-                <Link href="" className="link link-hover">Contact</Link>
-                <Link href="" className="link link-hover">Jobs</Link>
-                <Link href="" className="link link-hover">Press kit</Link>
+                <Link href="" className="link link-hover font-fauna">About us</Link>
+                <Link href="" className="link link-hover font-fauna">Contact</Link>
+                <Link href="" className="link link-hover font-fauna">Jobs</Link>
+                <Link href="" className="link link-hover font-fauna">Press kit</Link>
             </nav>
             <nav>
                 <h6 className="footer-title">Legal</h6>
-                <Link href="" className="link link-hover">Terms of use</Link>
-                <Link href="" className="link link-hover">Privacy policy</Link>
-                <Link href="" className="link link-hover">Cookie policy</Link>
+                <Link href="" className="link link-hover font-fauna">Terms of use</Link>
+                <Link href="" className="link link-hover font-fauna">Privacy policy</Link>
+                <Link href="" className="link link-hover font-fauna">Cookie policy</Link>
             </nav>
         </footer>
     )
@@ -45,7 +45,11 @@ const FooterTwo = () => {
         <footer className="footer px-10 py-4 border-t bg-neutral text-neutral-content">
             <aside className="items-center grid-flow-col">
                 <Image src={logo} alt='Point up logo' height={60} width={60} />
-                <p>Point Up <br />Earn while you spend</p>
+                <p>Point Up <br />
+                    <span className='font-fauna'>
+                        Earn while you spend
+                    </span>
+                </p>
             </aside>
             <nav className="md:place-self-center md:justify-self-end">
                 <div className="grid grid-flow-col gap-4">
@@ -54,6 +58,6 @@ const FooterTwo = () => {
                     <Link href={''}><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></Link>
                 </div>
             </nav>
-        </footer>
+        </footer >
     )
 }

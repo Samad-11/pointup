@@ -54,7 +54,7 @@ const Hero = () => {
                             Unlock reward and discover the perfect credit card for you
                         </p>
                         <p className='text-primary py-2 text-sm sm:text-base 
-                        
+                        font-fauna
                         '>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo excepturi mollitia voluptatibus molestiae modi qui natus quam, consequatur nobis, maiores reprehenderit</p>
                         <div className='my-6 sm:mb-8 sm:mt-5 flex justify-between max-sm:flex-col max-sm:gap-y-4 max-sm:pt-8'>
                             <button className="border font-medium relative border-white/[0.2] text-black dark:text-white 
@@ -117,14 +117,14 @@ const Stats = () => {
         max-sm:gap-7
         '>
             <div className='flex flex-col gap-2'>
-                <p className='text-primary text-sm max-sm:text-xs tracking-wider'>Transactions</p>
+                <p className='text-primary text-sm max-sm:text-xs tracking-wider font-fauna'>Transactions</p>
                 <div className="flex font-bold text-2xl sm:text-4xl gap-4 justify-between">
                     <span>25.6K</span>
                     <span className='text-white'><GrTransaction /></span>
                 </div>
             </div>
             <div className='flex flex-col gap-2'>
-                <p className='text-primary text-sm max-sm:text-xs tracking-wider'>Trusted Users</p>
+                <p className='text-primary text-sm max-sm:text-xs tracking-wider  font-fauna'>Trusted Users</p>
                 <div className="flex font-bold text-2xl sm:text-4xl gap-4 justify-between">
                     <span>2.8K</span>
                     <span className='text-white '><VscWorkspaceTrusted /></span>

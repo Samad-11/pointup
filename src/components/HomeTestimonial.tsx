@@ -81,12 +81,12 @@ const TestimonialDiv = ({ name, designation, review, divNo, black }: { divNo: st
                 </div>
                 <div className="detbox">
                     <p className={`name ${black && "dark"}`}>{name}</p>
-                    <p className={`designation ${black && "dark"}`}>{designation}</p>
+                    <p className={`designation font-fauna ${black && "dark"}`}>{designation}</p>
                 </div>
             </div>
             <div className={`review ${black && 'dark'}`}>
                 <h4>{review[0]}</h4>
-                <p>“ {review[1]} ”</p>
+                <p className='font-fauna'>“ {review[1]} ”</p>
             </div>
         </div>
     )

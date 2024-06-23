@@ -55,13 +55,14 @@ const Step = ({ title, description, image, sno }: { title: string, description: 
         <div className="carousel-item h-full
         px-5
         flex 
-        items-start
+        max-sm:items-start
+        items-center
         
         ">
             {
                 isEven(sno) ?
                     <>
-                        <div className='flex-1  flex flex-col items-end font-kalam z-20 relative'>
+                        <div className='flex-1  flex flex-col items-end z-20 relative'>
                             <Image src={image} alt='test' width={400} height={400} className='sm:hidden absolute -z-10 top-52 
                              size-72
                             '></Image>
@@ -71,7 +72,8 @@ const Step = ({ title, description, image, sno }: { title: string, description: 
                                 {title}
                             </h4>
                             <p className='text-gray-300
-                sm:text-lg text-sm font-semibold
+                sm:text-lg text-sm font-semibold 
+                font-fauna
                 '>{description}</p>
                             <div className='justify-self-end self-end max-sm:hidden'>
 
@@ -90,7 +92,7 @@ const Step = ({ title, description, image, sno }: { title: string, description: 
                         <div className="flex-1 flex  justify-center items-center max-sm:hidden">
                             <Image src={image} alt='test' width={400} height={400}></Image>
                         </div>
-                        <div className='flex-1  flex flex-col items-end font-kalam z-20 relative'>
+                        <div className='flex-1  flex flex-col items-end  z-20 relative'>
                             <Image src={image} alt='test' width={400} height={400} className='sm:hidden absolute -z-10 top-52
                             size-72
                             '></Image>
@@ -100,6 +102,7 @@ const Step = ({ title, description, image, sno }: { title: string, description: 
                             </h4>
                             <p className='text-gray-300
                 sm:text-lg text-sm font-semibold
+                font-fauna
                 '>{description}</p>
                             <div className='justify-self-end self-start max-sm:hidden'>
 
