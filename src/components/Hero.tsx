@@ -57,7 +57,7 @@ const Hero = () => {
                         font-fauna
                         '>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo excepturi mollitia voluptatibus molestiae modi qui natus quam, consequatur nobis, maiores reprehenderit</p>
                         <div className='my-6 sm:mb-8 sm:mt-5 flex justify-between max-sm:flex-col max-sm:gap-y-4 max-sm:pt-8'>
-                            <button className="border font-medium relative border-white/[0.2] text-black dark:text-white 
+                            <button className="border font-medium relative border-white/[0.2] text-white 
                         px-5 sm:px-10 py-1 rounded-full flex justify-center items-center gap-3
                         max-sm:border-[#d1ab38]
                         ">
