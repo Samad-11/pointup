@@ -15,22 +15,28 @@ export default Footer
 
 const FooterOne = () => {
     return (
-        <footer className="footer p-10 pt-20 border-t-2 border-gray-500 bg-black text-white">
-            <nav>
+        <footer className="flex p-10 pt-20 border-t-2 border-gray-500 bg-black text-white
+        justify-between 
+        flex-wrap
+        sm:pr-32
+        gap-y-8
+        ">
+
+            <nav className='flex flex-col'>
                 <h6 className="footer-title">Services</h6>
                 <Link href="" className="link link-hover font-fauna">Branding</Link>
                 <Link href="" className="link link-hover font-fauna">Design</Link>
                 <Link href="" className="link link-hover font-fauna">Marketing</Link>
                 <Link href="" className="link link-hover font-fauna">Advertisement</Link>
             </nav>
-            <nav>
+            <nav className='flex flex-col'>
                 <h6 className="footer-title">Company</h6>
                 <Link href="" className="link link-hover font-fauna">About us</Link>
                 <Link href="" className="link link-hover font-fauna">Contact</Link>
                 <Link href="" className="link link-hover font-fauna">Jobs</Link>
                 <Link href="" className="link link-hover font-fauna">Press kit</Link>
             </nav>
-            <nav>
+            <nav className='flex flex-col'>
                 <h6 className="footer-title">Legal</h6>
                 <Link href="" className="link link-hover font-fauna">Terms of use</Link>
                 <Link href="" className="link link-hover font-fauna">Privacy policy</Link>
