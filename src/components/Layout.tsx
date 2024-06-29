@@ -17,8 +17,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             link: "/service"
         },
         {
-            name: "Why Point Up?",
-            link: "/whypointup"
+            name: "Contact Us",
+            link: "/contact"
         },
         {
             name: "FAQs",

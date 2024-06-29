@@ -13,6 +13,7 @@ import Image from "next/image";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { IoMdClose, IoMdMenu } from "react-icons/io";
 import ApplyButton from "./ApplyButton";
+import { usePathname } from "next/navigation";
 
 export const FloatingNav = ({
     navItems,
@@ -26,9 +27,10 @@ export const FloatingNav = ({
     className?: string;
 }) => {
     const { scrollYProgress } = useScroll();
-
     const [visible, setVisible] = useState(true);
     const [bgBlack, setBgBlack] = useState(false)
+
+
 
 
     useMotionValueEvent(scrollYProgress, "change", (current) => {
@@ -125,6 +127,12 @@ const MobileNav = ({
     }[];
     className?: string;
 }) => {
+    const pathname = usePathname();
+
+
+    useEffect(() => {
+        console.log(pathname);
+    }, [pathname])
 
     const [isOpen, setIsOpen] = useState(false)
     return (
@@ -151,7 +159,7 @@ const MobileNav = ({
                         {
                             navItems.map((item, indx) => (
                                 <Link href={item.link} key={indx}
-                                    className="text-lg"
+                                    className={`text-lg ${(pathname === item.link) ? "text-[#d1ab38]" : ""}`}
                                 >{item?.icon} {item.name}</Link>
                             ))
                         }
