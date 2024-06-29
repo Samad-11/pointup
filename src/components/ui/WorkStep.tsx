@@ -67,7 +67,7 @@ const Step = ({ title, description, image, sno }: { title: string, description: 
                              size-72
                             '></Image>
 
-                            <h4 className='font-bold  z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 tracking-wide text-2xl sm:text-5xl pb-5 text-left'>
+                            <h4 className='font-bold  z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 tracking-wide text-2xl sm:text-5xl pb-5 text-left font-poppins'>
                                 <span className='text-6xl'>{sno}.</span>
                                 {title}
                             </h4>
@@ -96,7 +96,7 @@ const Step = ({ title, description, image, sno }: { title: string, description: 
                             <Image src={image} alt='test' width={400} height={400} className='sm:hidden absolute -z-10 top-52
                             size-72
                             '></Image>
-                            <h4 className='font-bold  z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 tracking-wide text-2xl sm:text-5xl pb-5 text-left'>
+                            <h4 className='font-bold  z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 tracking-wide text-2xl sm:text-5xl pb-5 text-left font-poppins'>
                                 <span className='text-6xl'>{sno}.</span>
                                 {title}
                             </h4>

@@ -20,6 +20,7 @@ const FooterOne = () => {
         flex-wrap
         sm:pr-32
         gap-y-8
+        gap-x-8
         ">
 
             <nav className='flex flex-col'>

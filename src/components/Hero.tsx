@@ -7,7 +7,7 @@ import { VscWorkspaceTrusted } from 'react-icons/vsc'
 import { GrTransaction } from 'react-icons/gr'
 import { FaLongArrowAltRight } from 'react-icons/fa'
 import { Spotlight } from './Spotlight'
-import logo from '../../public/images/logo/bgRemoveLogo.png'
+import MobileLogo from './ui/MobileLogo'
 const Hero = () => {
     const people = [
         {
@@ -42,9 +42,7 @@ const Hero = () => {
             <div className=" absolute pointer-events-none inset-0 flex items-center justify-center bg-black  [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
             <div className='flex  items-center justify-center sm:px-10 border h-screen
         max-sm:flex-col'>
-                <div className='absolute top-3 left-4 sm:hidden'>
-                    <Image src={logo} alt='Logo' height={80} width={80} />
-                </div>
+                <MobileLogo />
 
 
                 <div className='flex-1 flex justify-center sm:px-10 px-5 max-sm:pt-20'>

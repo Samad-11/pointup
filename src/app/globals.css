@@ -19,12 +19,16 @@
   }
 }
 
+.font-poppins {
+  font-family: var(--font-poppins);
+}
+
 /* .font-kalam {
   font-family: var(--font-kalam);
 } */
-.font-fauna {
+/* .font-fauna {
   font-family: var(--font-fauna-one);
-}
+} */
 
 html,
 body {

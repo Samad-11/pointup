@@ -5,6 +5,7 @@ import _2Img from '../../public/images/heroImage/6081538.png'
 import { StickyScroll } from './ui/StickyCards'
 import ApplyButton from './ui/ApplyButton'
 import WorkStep from './ui/WorkStep'
+import Header from './ui/Header'
 
 const HowWeDo = () => {
     const content = [
@@ -42,9 +43,9 @@ const HowWeDo = () => {
     return (
         <div className="pt-14 blackGradient min-h-screen">
             <div className="max-w-6xl mx-auto max-sm:p-4">
-                <h2 className="text-4xl sm:text-5xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 tracking-wide pb-16
-            
-            ">How <span className='bg-clip-text text-transparent bg-gradient-to-b from-[#d1ab38] to-neutral-500'>Point Up</span> Works</h2>
+                <Header>
+                    How <span className='bg-clip-text text-transparent bg-gradient-to-b from-[#d1ab38] to-neutral-500'>Point Up</span> Works
+                </Header>
                 {/* <StickyScroll content={content} /> */}
                 <WorkStep />
                 <div className='pt-10 sm:pt-16 flex justify-end'>
