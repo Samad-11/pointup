@@ -10,7 +10,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         },
         {
             name: "About Us",
-            link: "/about"
+            link: "/about-us"
         },
         {
             name: "Service",

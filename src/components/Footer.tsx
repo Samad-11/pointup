@@ -39,8 +39,8 @@ const FooterOne = () => {
             </nav>
             <nav className='flex flex-col'>
                 <h6 className="footer-title">Legal</h6>
-                <Link href="" className="link link-hover font-fauna">Terms of use</Link>
-                <Link href="" className="link link-hover font-fauna">Privacy policy</Link>
+                <Link href="/terms" className="link link-hover font-fauna">Terms of use</Link>
+                <Link href="/privacy-policy" className="link link-hover font-fauna">Privacy policy</Link>
                 <Link href="" className="link link-hover font-fauna">Cookie policy</Link>
             </nav>
         </footer>
