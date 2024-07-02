@@ -26,22 +26,22 @@ const FooterOne = () => {
             <nav className='flex flex-col'>
                 <h6 className="footer-title">Services</h6>
                 <Link href="" className="link link-hover font-fauna">Branding</Link>
-                <Link href="" className="link link-hover font-fauna">Design</Link>
+                {/* <Link href="" className="link link-hover font-fauna">Design</Link>
                 <Link href="" className="link link-hover font-fauna">Marketing</Link>
-                <Link href="" className="link link-hover font-fauna">Advertisement</Link>
+                <Link href="" className="link link-hover font-fauna">Advertisement</Link> */}
             </nav>
             <nav className='flex flex-col'>
                 <h6 className="footer-title">Company</h6>
-                <Link href="" className="link link-hover font-fauna">About us</Link>
-                <Link href="" className="link link-hover font-fauna">Contact</Link>
-                <Link href="" className="link link-hover font-fauna">Jobs</Link>
-                <Link href="" className="link link-hover font-fauna">Press kit</Link>
+                <Link href="about-us" className="link link-hover font-fauna">About us</Link>
+                <Link href="contact" className="link link-hover font-fauna">Contact</Link>
+                {/* <Link href="" className="link link-hover font-fauna">Jobs</Link> */}
+                {/* <Link href="" className="link link-hover font-fauna">Press kit</Link> */}
             </nav>
             <nav className='flex flex-col'>
                 <h6 className="footer-title">Legal</h6>
                 <Link href="/terms" className="link link-hover font-fauna">Terms of use</Link>
                 <Link href="/privacy-policy" className="link link-hover font-fauna">Privacy policy</Link>
-                <Link href="" className="link link-hover font-fauna">Cookie policy</Link>
+                {/* <Link href="" className="link link-hover font-fauna">Cookie policy</Link> */}
             </nav>
         </footer>
     )

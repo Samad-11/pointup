@@ -10,36 +10,48 @@ import {
 import { Label } from "@radix-ui/react-label";
 import { Input } from "@/components/ui/Input";
 import { TextArea } from "@/components/ui/TextArea";
+import toast, { Toaster } from "react-hot-toast";
+import { MdOutlineErrorOutline } from "react-icons/md";
 
 export function ContactForm() {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         console.log("Form submitted");
+        toast.custom((t) => (
+            <div className={`bg-black text-red-500 font-extrabold px-4 border-red-600 flex gap-4 items-center justify-center border py-3 rounded-full`}>
+                <MdOutlineErrorOutline className="text-4xl" />
+                <div>
+                    <p className="text-center text-xl">Error from our end</p>
+                    <span>Please contact us using any medium</span>
+                </div>
+            </div>
+        ))
     };
     return (
         <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input ">
             <h2 className="font-bold text-xl text-neutral-200">
                 Send us a Query
             </h2>
-
-            <form className="my-8" onSubmit={handleSubmit}>
+            <Toaster />
+            <form
+                className="my-8" onSubmit={handleSubmit}>
                 <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
                     <LabelInputContainer>
                         <Label htmlFor="firstname">First name</Label>
-                        <Input id="firstname" placeholder="Anmol" type="text" />
+                        <Input id="firstname" placeholder="Anmol" type="text" required />
                     </LabelInputContainer>
                     <LabelInputContainer>
                         <Label htmlFor="lastname">Last name</Label>
-                        <Input id="lastname" placeholder="Bhatia" type="text" />
+                        <Input id="lastname" placeholder="Bhatia" type="text" required />
                     </LabelInputContainer>
                 </div>
                 <LabelInputContainer className="mb-4">
                     <Label htmlFor="email">Email Address</Label>
-                    <Input id="email" placeholder="pointupreward@mail.com" type="email" />
+                    <Input id="email" placeholder="pointupreward@mail.com" type="email" required />
                 </LabelInputContainer>
                 <LabelInputContainer className="mb-10">
                     <Label htmlFor="query">Query</Label>
-                    <TextArea placeholder="I need to ask about ..." />
+                    <TextArea placeholder="I need to ask about ..." required />
                 </LabelInputContainer>
 
                 <button

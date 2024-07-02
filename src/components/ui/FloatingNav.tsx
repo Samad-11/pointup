@@ -13,7 +13,7 @@ import Image from "next/image";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { IoMdClose, IoMdMenu } from "react-icons/io";
 import ApplyButton from "./ApplyButton";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 export const FloatingNav = ({
     navItems,
@@ -29,6 +29,11 @@ export const FloatingNav = ({
     const { scrollYProgress } = useScroll();
     const [visible, setVisible] = useState(true);
     const [bgBlack, setBgBlack] = useState(false)
+
+    const router = useRouter();
+    const onClickHandle = () => {
+        router.push("https://wa.me/919999275769?text=I'm%20interested%20in%20your%20service")
+    }
 
 
 
@@ -102,7 +107,9 @@ export const FloatingNav = ({
                             </Link>
                         ))}
                     </div>
-                    <button className="border font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-10 py-1 rounded-full flex justify-center items-center gap-3 
+                    <button
+                        onClick={onClickHandle}
+                        className="border font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-10 py-1 rounded-full flex justify-center items-center gap-3 
                 hover:border-[#d1ab38] transition-all
                 ">
                         <span>Apply</span>
