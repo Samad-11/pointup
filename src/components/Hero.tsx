@@ -52,7 +52,7 @@ const Hero = () => {
                 {/* <Logo /> */}
 
 
-                <div className='flex-1 flex justify-center sm:px-10 px-5 max-sm:pt-20 pt-40'>
+                <div className='flex-1 flex justify-center sm:px-10 px-5 max-sm:pt-20 pt-20'>
                     <div className='self-end max-w-sm '>
 
                         <p className="text-3xl max-sm:max-w-xs sm:text-3xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b dark:from-neutral-200 from-neutral-600 to-neutral-900 dark:to-neutral-500 py-8">
@@ -90,7 +90,7 @@ const Hero = () => {
                         <div className='max-sm:hidden'>
                             <Stats />
                         </div>
-                        <div className='size-52 w-full flex items-center justify-center max-sm:hidden'>
+                        <div className='h-24 w-full flex items-center justify-center max-sm:hidden'>
                             <CTAtoHowWeDo />
                         </div>
                     </div>
