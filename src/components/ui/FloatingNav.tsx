@@ -90,7 +90,7 @@ export const FloatingNav = ({
                         duration: 0.2,
                     }}
                     className={cn(
-                        "max-sm:hidden flex w-screen  fixed top-0 inset-x-0 mx-auto border border-transparent  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] pr-2 pl-8 py-2  items-center justify-around space-x-4 ",
+                        "max-sm:hidden flex w-screen  fixed top-0 inset-x-0 mx-auto border border-transparent  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] pr-2 pl-8 py-0  items-center justify-around space-x-4",
                         className,
                         {
                             "bg-black/50": bgBlack
@@ -104,7 +104,7 @@ export const FloatingNav = ({
                             className={``}
                             src={logo} alt="logo" />
                     </div>
-                    <div className="gap-9">
+                    <div className="gap-x-9">
                         {navItems.map((navItem: any, idx: number) => (
                             <TransitionLink
                                 key={`link=${idx}`}
@@ -174,7 +174,7 @@ const MobileNav = ({
 
                             src={logo} alt="point up logo" height={60} width={60} />
                     </div>
-                    <div className="flex flex-col gap-4 mt-20 mb-20">
+                    <div className="flex flex-col gap-4 mt-10">
                         {
                             navItems.map((item, indx) => (
                                 <TransitionLink href={item.link} key={indx}

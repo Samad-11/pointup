@@ -33,7 +33,7 @@ export default function Home() {
 
   return (
 
-    <main className="min-h-[300vh] ">
+    <main className="min-h-[300vh]">
       <Hero />
       <HowWeDo />
       <HomeService />

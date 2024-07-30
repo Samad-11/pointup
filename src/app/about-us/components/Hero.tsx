@@ -21,6 +21,7 @@ const Hero = () => {
                         max-sm:max-w-xs
                         max-sm:pb-3
                         font-poppins
+                        pt-20
                         '>
                             Stop leaving money on the table!
                         </Header>

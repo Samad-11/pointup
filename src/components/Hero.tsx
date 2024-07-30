@@ -38,7 +38,8 @@ const Hero = () => {
         },
     ]
     return (
-        <div className="min-h-screen w-full dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative 
+        <div className="
+        min-h-screen w-full dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative 
         ">
             <Spotlight
                 className="-top-20 left-0 md:left-60 md:-top-10"
@@ -51,7 +52,7 @@ const Hero = () => {
                 {/* <Logo /> */}
 
 
-                <div className='flex-1 flex justify-center sm:px-10 px-5 max-sm:pt-20 pt-20'>
+                <div className='flex-1 flex justify-center sm:px-10 px-5 max-sm:pt-20 pt-40'>
                     <div className='self-end max-w-sm '>
 
                         <p className="text-3xl max-sm:max-w-xs sm:text-3xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b dark:from-neutral-200 from-neutral-600 to-neutral-900 dark:to-neutral-500 py-8">

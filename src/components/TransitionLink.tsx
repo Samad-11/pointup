@@ -2,7 +2,7 @@
 import { cn } from '@/utils/cn'
 import { ClassArray, ClassValue } from 'clsx'
 import Link, { LinkProps } from 'next/link'
-import { useRouter } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import React, { ReactNode } from 'react'
 
 
@@ -17,9 +17,11 @@ const sleep = (ms: number): Promise<void> => {
 }
 
 const TransitionLink = ({ children, href, className, ...props }: TransitionLinkProps) => {
+    const pathname = usePathname()
     const { push } = useRouter()
     const onTransitionLinkClick = async (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
         e.preventDefault()
+        if (pathname === href) return
 
         //transition on body before go to next page using framer motion
         const body = document.getElementById("body")

@@ -29,8 +29,10 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     return (
         <>
             <FloatingNav navItems={navItems} className='navbar' />
+
             {/* <Logo /> */}
             {children}
+
             <Footer />
         </>
     )
