@@ -19,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="mytheme" className="no-scrollbar">
-      <body id="body" className={`${inter.className} ${poppins.variable}`}>
+    <html lang="en" data-theme="mytheme" className="no-scrollbar bg-black">
+      <body id="body" className={`${inter.className} ${poppins.variable} `}>
         <Layout>
           {children}
         </Layout>

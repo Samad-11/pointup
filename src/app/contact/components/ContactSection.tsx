@@ -13,7 +13,7 @@ const ContactSection = () => {
             <div className="flex flex-row-reverse flex-wrap-reverse">
                 <div className='flex-1 border-l p-5'>
                     <div className='flex flex-col text-primary font-poppins text-xl font-bold gap-5 items-start '>
-                        <Header classname='pb-10'>
+                        <Header classname='pb-10 '>
                             Contact Us
                             <div className="bg-gradient-to-r from-transparent via-[#d1ab38] to-transparent mt-8 h-[1px] w-full" />
                         </Header>

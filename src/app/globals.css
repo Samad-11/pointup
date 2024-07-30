@@ -288,7 +288,7 @@ body {
 
 .page-transition {
   background-color: #000000;
-  /* opacity: 0; */
+  opacity: .02;
   transform: translateY(-40px);
   filter: blur(12px);
 }

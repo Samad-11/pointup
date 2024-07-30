@@ -22,15 +22,18 @@ const Hero = () => {
                         '>
                             Let&apos;s work together
                         </Header>
-                        <Link href={""} className='flex justify-start items-center gap-3 link link-hover'>
-
-                            <span className="text-base-200 text-left
+                        <Link href={"https://wa.me/919999275769?text=I'm%20interested%20in%20your%20ser"}
+                            className='flex justify-start items-center sm:gap-1  link link-hover 
+                        text-base-200 text-left
                         font font-extrabold
-                        text-4xl
-                        ">
-                                Join the community
-                            </span>
-                            <FaArrowUpRightDots className='text-4xl text-amber-100' />
+                        sm:text-4xl
+                        text-2xl
+                        w-full
+                        '>
+
+
+                            Join the community
+                            <FaArrowUpRightDots className='sm:text-4xl text-amber-100' />
                         </Link>
                     </div>
                     <div className='flex-1 relative h-screen w-full '>
