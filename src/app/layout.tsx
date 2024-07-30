@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-theme="mytheme" className="no-scrollbar">
-      <body className={`${inter.className} ${poppins.variable}`}>
+      <body id="body" className={`${inter.className} ${poppins.variable}`}>
         <Layout>
           {children}
         </Layout>

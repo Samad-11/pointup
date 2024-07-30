@@ -39,9 +39,15 @@ const HowWeDo = () => {
                 "Hey - you have reached your travel location. Why not click some great pics and tag us!! We’ll love to see you enjoy your free vacation😊",
             content: <ContentBox img={_1Img} />
         },
+        {
+            title: "Wait Wait Wait",
+            description:
+                "Not a travel fan! Don't worry we wont stop only at Travel. We'll help you to extracting the most from your credit card for petrol savings / online shopping / vouchers & many more ....",
+            content: <ContentBox img={_2Img} />
+        },
     ]
     return (
-        <div className="pt-14 blackGradient min-h-screen">
+        <div className="pt-14 blackGradient min-h-screen" id='howWeDo'>
             <div className="max-w-6xl mx-auto max-sm:p-4">
                 <Header>
                     How <span className='bg-clip-text text-transparent bg-gradient-to-b from-[#d1ab38] to-neutral-500'>Point Up</span> Works

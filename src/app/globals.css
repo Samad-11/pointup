@@ -275,3 +275,30 @@ body {
   color: white;
   transform: rotateY(180deg);
 }
+
+
+/* page transition  */
+
+body {
+  transition-property: opacity, background, transform, filter;
+  transition-timing-function: cubic-bezier(.86, 0, .07, 1);
+  transition-duration: 500ms;
+}
+
+
+.page-transition {
+  background-color: #000000;
+  /* opacity: 0; */
+  transform: translateY(-40px);
+  filter: blur(12px);
+}
+
+
+.logoTest {
+  transform: translateX(-20px);
+  transform: translateY(50px);
+  left: 50%;
+  top: 50%;
+  scale: 4;
+  z-index: -500;
+}

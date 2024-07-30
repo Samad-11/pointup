@@ -29,14 +29,20 @@ const WorkStep = () => {
         {
             title: "⁠We assist you in redeeming the points for hotel / airline booking",
             description:
-                "When u r ready for your vacation - we help you redeem your points for payment of hotels / flights. We are at your service till the bookings are not completed. So you just spend and reach the airport for your travel!!   ",
+                "When you are ready for your vacation - we help you redeem your points for payment of hotels / flights. We are at your service till the bookings are not completed. So you just spend and reach the airport for your travel!!   ",
             image: test2
         },
         {
             title: "⁠Hey - you’ve earned yourself free hotel / flight! Enjoy your free vacation :)",
             description:
-                "Hey - you have reached your travel location. Why not click some great pics and tag us!! We’ll love to see you enjoy your free vacation😊",
+                "Hey - you have reached your travel location. Why not click some great pics and tag us!! We’ll love to see you enjoy your free vacation",
             image: test1
+        },
+        {
+            title: "Wait Wait Wait",
+            description:
+                "Not a travel fan! Don't worry we wont stop only at Travel. We'll help you to extracting the most from your credit card for petrol savings / online shopping / vouchers & many more ....",
+            image: test2
         },
     ]
     return (

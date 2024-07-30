@@ -1,6 +1,7 @@
 import React from 'react'
 import { FloatingNav } from './ui/FloatingNav'
 import Footer from './Footer'
+import Logo from './ui/Logo'
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
     const navItems = [
@@ -28,6 +29,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     return (
         <>
             <FloatingNav navItems={navItems} className='navbar' />
+            {/* <Logo /> */}
             {children}
             <Footer />
         </>

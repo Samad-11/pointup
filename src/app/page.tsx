@@ -3,6 +3,8 @@ import HomeService from "@/components/HomeService";
 import HomeTestimonial from "@/components/HomeTestimonial";
 import HowWeDo from "@/components/HowWeDo";
 import ParallaxBG from "@/components/ParallaxBG";
+import loading from "./loading";
+import LoadingComponent from "@/components/LoadingComponent";
 
 
 export default function Home() {
@@ -28,6 +30,7 @@ export default function Home() {
       link: "/faq"
     },
   ]
+
   return (
 
     <main className="min-h-[300vh] ">

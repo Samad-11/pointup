@@ -14,6 +14,7 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import { IoMdClose, IoMdMenu } from "react-icons/io";
 import ApplyButton from "./ApplyButton";
 import { usePathname, useRouter } from "next/navigation";
+import TransitionLink from "../TransitionLink";
 
 export const FloatingNav = ({
     navItems,
@@ -65,6 +66,12 @@ export const FloatingNav = ({
         }
     });
 
+    const [logoClass, setLogoClass] = useState(false)
+    useEffect(() => {
+        setLogoClass(true)
+
+    }, [])
+
     return (
         <>
             <AnimatePresence mode="wait">
@@ -90,30 +97,34 @@ export const FloatingNav = ({
                         }
                     )}
                 >
-                    <div>
-                        <Image src={logo} alt="logo" height={70} width={70} />
+                    <div className={``}>
+                        <Image
+                            height={115}
+                            width={115}
+                            className={``}
+                            src={logo} alt="logo" />
                     </div>
                     <div className="gap-9">
                         {navItems.map((navItem: any, idx: number) => (
-                            <Link
+                            <TransitionLink
                                 key={`link=${idx}`}
                                 href={navItem.link}
                                 className={cn(
-                                    "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
+                                    "relative dark:text-neutral-50 items-center flex space-x-1 text-white dark:hover:text-neutral-300 hover:text-[#d1ab38] hover:underline underline-offset-4 dark:hover:no-underline"
                                 )}
                             >
                                 <span className="block sm:hidden">{navItem.icon}</span>
                                 <span className="hidden sm:block text-sm">{navItem.name}</span>
-                            </Link>
+                            </TransitionLink>
                         ))}
                     </div>
                     <button
                         onClick={onClickHandle}
-                        className="border font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-10 py-1 rounded-full flex justify-center items-center gap-3 
+                        className="border font-medium relative  dark:border-white/[0.2] border-black/[0.5] dark:text-white  px-10 py-1 rounded-full flex justify-center items-center gap-3 
                 hover:border-[#d1ab38] transition-all
                 ">
-                        <span>Apply</span>
-                        <span className=""><FaLongArrowAltRight size={26} /></span>
+                        <span className="text-neutral-800 dark:text-[#d1ab38] ">Apply</span>
+                        <span className=""><FaLongArrowAltRight size={26} className="text-neutral-800 dark:text-[#d1ab38] " /></span>
                         <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-[#d1ab38] to-transparent  h-px" />
                     </button>
                 </motion.div>
@@ -159,14 +170,16 @@ const MobileNav = ({
                 <aside className="menu  p-4 w-[50vw] h-screen bg-accent text-accent-content border-r-2 border-r-gray-600 font-kalam">
                     {/* Sidebar content here */}
                     <div>
-                        <Image src={logo} alt="point up logo" height={60} width={60} />
+                        <Image
+
+                            src={logo} alt="point up logo" height={60} width={60} />
                     </div>
                     <div className="flex flex-col gap-4 mt-20 mb-20">
                         {
                             navItems.map((item, indx) => (
-                                <Link href={item.link} key={indx}
+                                <TransitionLink href={item.link} key={indx}
                                     className={`text-lg ${(pathname === item.link) ? "text-[#d1ab38]" : ""}`}
-                                >{item?.icon} {item.name}</Link>
+                                >{item?.icon} {item.name}</TransitionLink>
                             ))
                         }
                     </div>

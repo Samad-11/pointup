@@ -17,19 +17,19 @@ const ContactSection = () => {
                             Contact Us
                             <div className="bg-gradient-to-r from-transparent via-[#d1ab38] to-transparent mt-8 h-[1px] w-full" />
                         </Header>
-                        <div className='flex  justify-center items-center gap-5 hover:link group'>
+                        {/* <div className='flex  justify-center items-center gap-5 hover:link group'>
                             <FiPhone className='group-hover:text-white' />
 
                             <Link href={"tel:+919999275769"} className='font-extralight group-hover:font-semibold'>+91 99992 75769</Link>
-                        </div>
+                        </div> */}
                         <div className='flex  justify-center items-center gap-5 hover:link group '>
                             <FiPhone className='group-hover:text-white' />
-                            <Link href={'tel:+919971338755'} className='font-extralight group-hover:font-semibold'>+91 99713 38755</Link>
+                            <Link href={'tel:+919205392989'} className='font-extralight group-hover:font-semibold'>+91 92053 92989</Link>
                         </div>
-                        <div className='flex  justify-center items-center gap-5 hover:link group '>
+                        {/* <div className='flex  justify-center items-center gap-5 hover:link group '>
                             <FaWhatsapp className='group-hover:text-white' />
                             <Link target='_blank' href={"https://wa.me/919999275769?text=I'm%20interested%20in%20your%20service"} className='font-extralight group-hover:font-semibold'>+91 99992 75769</Link>
-                        </div>
+                        </div> */}
                         <div className='flex  justify-center items-center gap-5 hover:link group '>
                             <CiMail className='group-hover:text-white' />
                             <Link target='_blank' href={'mailto:service@pointup.com'} className='font-extralight group-hover:font-semibold'>admin@pointup.com</Link>

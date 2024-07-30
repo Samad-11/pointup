@@ -3,6 +3,8 @@ import React from 'react'
 import mascot from '../../../../public/images/heroImage/about-hero-mascot.png'
 import Image from 'next/image'
 import MobileLogo from '@/components/ui/MobileLogo'
+import Link from 'next/link'
+import { FaArrowUpRightDots } from 'react-icons/fa6'
 const Hero = () => {
     return (
         <div className="hero min-h-screen bg-fixed" style={{ backgroundImage: 'url(images/heroImage/about-hero-bg.jpg)' }}>
@@ -20,11 +22,16 @@ const Hero = () => {
                         '>
                             Let&apos;s work together
                         </Header>
-                        <p className="text-base-200 text-left
-                        max-sm:self-end
-                        max-sm:text-xs
-                        max-sm:max-w-xs
-                        ">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                        <Link href={""} className='flex justify-start items-center gap-3 link link-hover'>
+
+                            <span className="text-base-200 text-left
+                        font font-extrabold
+                        text-4xl
+                        ">
+                                Join the community
+                            </span>
+                            <FaArrowUpRightDots className='text-4xl text-amber-100' />
+                        </Link>
                     </div>
                     <div className='flex-1 relative h-screen w-full '>
                         <Image src={mascot} alt='mascot'

@@ -8,6 +8,10 @@ import { GrTransaction } from 'react-icons/gr'
 import { FaLongArrowAltRight } from 'react-icons/fa'
 import { Spotlight } from './Spotlight'
 import MobileLogo from './ui/MobileLogo'
+import Header from './ui/Header'
+import { BiDownArrow } from 'react-icons/bi'
+import CTAtoHowWeDo from './ui/CTAtoHowWeDo'
+import Logo from './ui/Logo'
 const Hero = () => {
     const people = [
         {
@@ -33,7 +37,7 @@ const Hero = () => {
         },
     ]
     return (
-        <div className="min-h-screen w-full bg-black bg  bg-grid-white/[0.2] relative 
+        <div className="min-h-screen w-full dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative 
         ">
             <Spotlight
                 className="-top-20 left-0 md:left-60 md:-top-10"
@@ -43,37 +47,49 @@ const Hero = () => {
             <div className='flex  items-center justify-center sm:px-10 border h-screen
         max-sm:flex-col'>
                 <MobileLogo />
+                {/* <Logo /> */}
 
 
-                <div className='flex-1 flex justify-center sm:px-10 px-5 max-sm:pt-20'>
+                <div className='flex-1 flex justify-center sm:px-10 px-5 max-sm:pt-20 pt-20'>
                     <div className='self-end max-w-sm '>
 
-                        <p className="text-3xl max-sm:max-w-xs sm:text-3xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8">
-                            Unlock reward and discover the perfect credit card for you
+                        <p className="text-3xl max-sm:max-w-xs sm:text-3xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b dark:from-neutral-200 from-neutral-600 to-neutral-900 dark:to-neutral-500 py-8">
+                            Unlock the Travel You Deserve with Point Up
                         </p>
                         <p className='text-primary py-2 text-sm sm:text-base 
                         font-fauna
-                        '>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo excepturi mollitia voluptatibus molestiae modi qui natus quam, consequatur nobis, maiores reprehenderit</p>
+                        '>
+                            Stop missing out on valuable rewards. We help you maximize your credit card points and book amazing travel experiences.
+                        </p>
                         <div className='my-6 sm:mb-8 sm:mt-5 flex justify-between max-sm:flex-col max-sm:gap-y-4 max-sm:pt-8'>
-                            <button className="border font-medium relative border-white/[0.2] text-white 
-                        px-5 sm:px-10 py-1 rounded-full flex justify-center items-center gap-3
+                            <button className="border font-medium relative dark:border-white/[0.2] border-black/[0.2] dark:text-white 
+                        px-5 sm:px-4 py-1 rounded-full flex justify-center items-center gap-3
                         max-sm:border-[#d1ab38]
                         ">
-                                <span>Apply</span>
+                                <span className='text-sm'>Join the club now!</span>
                                 <span><FaLongArrowAltRight size={26} /></span>
                                 <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-[#d1ab38] to-transparent  h-px" />
                             </button>
                             <div className='flex justify-center items-center flex-row-reverse'>
-                                <div className='flex flex-1'>
-                                    <AnimatedTooltip items={people} />
+                                <div className='flex flex-1 flex-col items-center justify-center gap-y-4'>
+                                    <div className='flex '>
+                                        <AnimatedTooltip items={people} />
+                                    </div>
+                                    <div className="text-white sm:hidden">
+                                        <CTAtoHowWeDo />
+                                    </div>
+
                                 </div>
-                                <div className='sm:hidden flex-1'>
+                                <div className='sm:hidden flex-1 '>
                                     <Stats />
                                 </div>
                             </div>
                         </div>
                         <div className='max-sm:hidden'>
                             <Stats />
+                        </div>
+                        <div className='size-52 w-full flex items-center justify-center max-sm:hidden'>
+                            <CTAtoHowWeDo />
                         </div>
                     </div>
                 </div>
@@ -85,13 +101,12 @@ const Hero = () => {
                         right-0
                         -top-5
                     "
-
                         width={300}
                         height={300}
                     />
                 </div>
                 <div className='flex-1 relative  h-full w-full max-sm:hidden'>
-                    <Image src={cardsImg} alt='cardImage' className="shadow-black shadow-lg absolute 
+                    <Image src={cardsImg} alt='cardImage' className="dark:shadow-black dark:shadow-lg absolute 
                 top-[50%] left-[50%] sm:-translate-x-[50%] -translate-x-[100%] sm:-translate-y-[40%] -translate-y-[60%]
                 " height={500} width={1000} />
                 </div>
@@ -106,7 +121,8 @@ export default Hero
 const Stats = () => {
     return (
         <div className='flex w-full px-5 justify-between max-w-lg
-        font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500
+        font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b dark:from-neutral-200 dark:to-neutral-500
+        from-neutral-600 to-neutral-900
         font-kalam
         max-sm:pt-8
         max-sm:flex-col
@@ -117,15 +133,15 @@ const Stats = () => {
             <div className='flex flex-col gap-2'>
                 <p className='text-primary text-sm max-sm:text-xs tracking-wider font-fauna'>Transactions</p>
                 <div className="flex font-bold text-2xl sm:text-4xl gap-4 justify-between">
-                    <span>25.6K</span>
-                    <span className='text-white'><GrTransaction /></span>
+                    <span className=''>25.6K</span>
+                    <span className='dark:text-white text-black'><GrTransaction /></span>
                 </div>
             </div>
             <div className='flex flex-col gap-2'>
                 <p className='text-primary text-sm max-sm:text-xs tracking-wider  font-fauna'>Trusted Users</p>
                 <div className="flex font-bold text-2xl sm:text-4xl gap-4 justify-between">
                     <span>2.8K</span>
-                    <span className='text-white '><VscWorkspaceTrusted /></span>
+                    <span className='dark:text-white text-black '><VscWorkspaceTrusted /></span>
                 </div>
             </div>
         </div>
