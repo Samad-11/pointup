@@ -3,8 +3,8 @@ import ApplyButton from './ui/ApplyButton'
 
 const ParallaxBG = () => {
     return (
-        <div className="hero min-h-screen  md:bg-fixed" style={{ backgroundImage: 'url(images/bgImages/b1.jpg)' }}>
-            <div className="hero-overlay bg-opacity-90 "></div>
+        <div className="hero h-screen  md:bg-fixed" style={{ backgroundImage: 'url(images/bgImages/b1.jpg)' }}>
+            <div className="hero-overlay bg-opacity-90"></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-lg">
                     <h1 className="mb-5 text-5xl font-bold">Unlock the limitless possibilities</h1>

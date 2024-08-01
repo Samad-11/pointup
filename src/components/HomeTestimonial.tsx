@@ -9,7 +9,7 @@ import Header from './ui/Header'
 const HomeTestimonial = () => {
     return (
         <div className='bg-black min-h-[120vh] relative'>
-            <div className='max-w-6xl  mx-auto py-8 pt-12 max-sm:px-4'>
+            <div className='max-w-6xl  mx-auto py-8 pt-12 max-sm:px-4 '>
                 <Header>
                     What our clients say
                 </Header>
@@ -63,8 +63,8 @@ const TestimonialDivs = () => {
     ]
     return (
 
-        <div className='outerDiv'>
-            <div className="innerdiv">
+        <div className='outerDiv '>
+            <div className="innerdiv  mx-auto">
                 {
                     testimonials.map(({ black, divNo, designation, name, review }, indx) => (
                         <TestimonialDiv key={indx} black={black} divNo={divNo} designation={designation} name={name} review={review} />
