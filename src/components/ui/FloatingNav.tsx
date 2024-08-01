@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import logo from '../../../public/images/logo/bgRemoveLogo.png'
 import {
     motion,
@@ -27,6 +27,7 @@ export const FloatingNav = ({
     }[];
     className?: string;
 }) => {
+
     const { scrollYProgress } = useScroll();
     const [visible, setVisible] = useState(true);
     const [bgBlack, setBgBlack] = useState(false)
@@ -145,7 +146,7 @@ const MobileNav = ({
     className?: string;
 }) => {
     const pathname = usePathname();
-
+    const drawerRef = useRef<HTMLInputElement>(null)
 
     useEffect(() => {
         console.log(pathname);
@@ -154,7 +155,7 @@ const MobileNav = ({
     const [isOpen, setIsOpen] = useState(false)
     return (
         <div className="drawer z-[999]">
-            <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+            <input id="my-drawer" type="checkbox" className="drawer-toggle" ref={drawerRef} />
             <div className="drawer-content fixed top-9 right-3">
                 {/* Page content here */}
                 <label htmlFor="my-drawer" className="sm:hidden drawer-button">
@@ -174,12 +175,19 @@ const MobileNav = ({
 
                             src={logo} alt="point up logo" height={60} width={60} />
                     </div>
-                    <div className="flex flex-col gap-4 mt-10">
+                    <div className="flex flex-col gap-4 mt-10 mb-5">
                         {
                             navItems.map((item, indx) => (
                                 <TransitionLink href={item.link} key={indx}
                                     className={`text-lg ${(pathname === item.link) ? "text-[#d1ab38]" : ""}`}
-                                >{item?.icon} {item.name}</TransitionLink>
+                                >
+                                    <span onClick={() => {
+                                        drawerRef.current?.click();
+                                        setIsOpen(false)
+                                    }}>
+                                        {item?.icon} {item.name}
+                                    </span>
+                                </TransitionLink>
                             ))
                         }
                     </div>
