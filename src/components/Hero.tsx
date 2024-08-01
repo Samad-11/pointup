@@ -46,7 +46,7 @@ const Hero = () => {
                 fill="#d1ab38"
             />
             <div className=" absolute pointer-events-none inset-0 flex items-center justify-center bg-black  [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
-            <div className='flex  items-center justify-center sm:px-10 border h-screen
+            <div className='flex  items-center justify-center sm:px-10  h-screen
         max-sm:flex-col'>
                 <MobileLogo />
                 {/* <Logo /> */}
