@@ -9,7 +9,7 @@ import React, { ReactNode } from 'react'
 interface TransitionLinkProps extends LinkProps {
     children: ReactNode,
     href: string,
-    className: ClassValue
+    className?: ClassValue
 }
 
 const sleep = (ms: number): Promise<void> => {

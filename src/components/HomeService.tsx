@@ -8,7 +8,7 @@ import Header from './ui/Header'
 
 const HomeService = () => {
     return (
-        <div className='blackGradient2 min-h-screen '>
+        <div id='home-service-section' className='blackGradient2 min-h-screen '>
             <div className='max-w-6xl mx-auto max-sm:px-4 max-sm:pb-10 '>
                 <Header>
                     <span className='flex'>
@@ -18,7 +18,7 @@ const HomeService = () => {
                 </Header>
                 <HoverEffect items={items} />
                 <div className='pt-10 flex justify-end '>
-                    <ApplyButton buttonText={"More"} />
+                    <ApplyButton buttonText={"Join Now"} />
                 </div>
             </div>
         </div>

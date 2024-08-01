@@ -23,6 +23,8 @@ const HowWeHelp = () => {
         max-w-5xl
         mx-auto
         pt-20
+        md:pb-20
+        
         '>
             <Header classname='max-sm:text-2xl max-sm:pb-0'>
                 Here&apos;s how Point Up helps you win the rewards game
@@ -69,9 +71,9 @@ export function HowWeHelpSection() {
     // ];
     return (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3
-        sm:grid-rows-3
+        lg:grid-rows-3
 
-        relative z-10 pb-10 max-w-7xl mx-auto">
+        relative z-10  pb-10 max-w-7xl mx-auto">
             {howWeHelp.map((how, index) => (
                 <Feature key={how.title} {...how} index={index} />
             ))}

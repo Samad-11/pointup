@@ -6,8 +6,7 @@ const JoinNow = () => {
     return (
         <div className='min-h-[50vh] w-full border pt-20 max-w-5xl mx-auto px-10
         bg-gradient-to-bl from-gray-800 to-black glass
-        space-y-10
-        
+        space-y-10  
         '>
             <p
                 className='text-3xl

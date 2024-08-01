@@ -6,7 +6,7 @@ import { FaLongArrowAltRight } from 'react-icons/fa'
 const ApplyButton = ({ buttonText }: { buttonText: String }) => {
     const router = useRouter()
     const onClickHandle = () => {
-        router.push("https://wa.me/919999275769?text=I'm%20interested%20in%20your%20service")
+        router.push("https://wa.me/919999275769?text=I%am%20interested%20in%20your%20service")
     }
     return (
         <button

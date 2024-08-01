@@ -8,7 +8,7 @@ import Header from '@/components/ui/Header'
 
 const WeCater = () => {
     return (
-        <div >
+        <div className=''>
             <Header classname='pt-10
           
             '>
