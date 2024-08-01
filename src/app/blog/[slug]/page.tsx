@@ -12,6 +12,7 @@ const BlogDetailPage = ({ params }: { params: { slug: string } }) => {
         mx-auto
         pb-10
         '>
+
             <div className='pt-40'>
                 <Header>
                     Amex Platinum Travel Card: Hack Your Way to Free Marriott Stays (But Read the Fine Print!)

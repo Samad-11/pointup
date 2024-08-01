@@ -39,7 +39,7 @@ const Hero = () => {
     ]
     return (
         <div className="
-        min-h-screen w-full dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative 
+        min-h-screen w-full bg-black  bg-grid-white/[0.2] relative 
         ">
             <Spotlight
                 className="-top-20 left-0 md:left-60 md:-top-10"
@@ -55,7 +55,7 @@ const Hero = () => {
                 <div className='flex-1 flex justify-center sm:px-10 px-5 max-sm:pt-20 pt-20'>
                     <div className='self-end max-w-sm '>
 
-                        <p className="text-3xl max-sm:max-w-xs sm:text-3xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b dark:from-neutral-200 from-neutral-600 to-neutral-900 dark:to-neutral-500 py-8">
+                        <p className="text-3xl max-sm:max-w-xs sm:text-3xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200   to-neutral-500 py-8">
                             Unlock the Travel You Deserve with Point Up
                         </p>
                         <p className='text-primary py-2 text-sm sm:text-base 
@@ -64,7 +64,7 @@ const Hero = () => {
                             Stop missing out on valuable rewards. We help you maximize your credit card points and book amazing travel experiences.
                         </p>
                         <div className='my-6 sm:mb-8 sm:mt-5 flex justify-between max-sm:flex-col max-sm:gap-y-4 max-sm:pt-8'>
-                            <Link href="https://wa.me/919999275769?text=I'm%20interested%20in%20your%20ser" className="border font-medium relative dark:border-white/[0.2] border-black/[0.2] dark:text-white 
+                            <Link href="https://wa.me/919999275769?text=I'm%20interested%20in%20your%20ser" className="border font-medium relative border-white/[0.2] text-white 
                         px-5 sm:px-4 py-1 rounded-full flex justify-center items-center gap-3
                         max-sm:border-[#d1ab38]
                         ">
@@ -108,7 +108,7 @@ const Hero = () => {
                     />
                 </div>
                 <div className='flex-1 relative  h-full w-full max-sm:hidden'>
-                    <Image src={cardsImg} alt='cardImage' className="dark:shadow-black dark:shadow-lg absolute 
+                    <Image src={cardsImg} alt='cardImage' className="shadow-black shadow-lg absolute 
                 top-[50%] left-[50%] sm:-translate-x-[50%] -translate-x-[100%] sm:-translate-y-[40%] -translate-y-[60%]
                 " height={500} width={1000} />
                 </div>
@@ -123,8 +123,7 @@ export default Hero
 const Stats = () => {
     return (
         <div className='flex w-full px-5 justify-between max-w-lg
-        font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b dark:from-neutral-200 dark:to-neutral-500
-        from-neutral-600 to-neutral-900
+        font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500
         font-kalam
         max-sm:pt-8
         max-sm:flex-col
@@ -136,14 +135,14 @@ const Stats = () => {
                 <p className='text-primary text-sm max-sm:text-xs tracking-wider font-fauna'>Transactions</p>
                 <div className="flex font-bold text-2xl sm:text-4xl gap-4 justify-between">
                     <span className=''>25.6K</span>
-                    <span className='dark:text-white text-black'><GrTransaction /></span>
+                    <span className='text-white'><GrTransaction /></span>
                 </div>
             </div>
             <div className='flex flex-col gap-2'>
                 <p className='text-primary text-sm max-sm:text-xs tracking-wider  font-fauna'>Trusted Users</p>
                 <div className="flex font-bold text-2xl sm:text-4xl gap-4 justify-between">
                     <span>2.8K</span>
-                    <span className='dark:text-white text-black '><VscWorkspaceTrusted /></span>
+                    <span className='text-white '><VscWorkspaceTrusted /></span>
                 </div>
             </div>
         </div>
