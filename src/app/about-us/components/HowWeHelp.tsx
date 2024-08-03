@@ -70,8 +70,7 @@ export function HowWeHelpSection() {
     //     },
     // ];
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3
-        lg:grid-rows-3
+        <div className="grid grid-cols-1 sm:grid-cols-2
 
         relative z-10  pb-10 max-w-7xl mx-auto">
             {howWeHelp.map((how, index) => (
@@ -119,12 +118,11 @@ const Feature = ({
     return (
         <div
             className={cn(
-                "flex flex-col lg:border-r py-10 relative group/feature border-neutral-800 ",
+                "flex flex-col py-10 relative group/feature border-neutral-800 ",
 
-                (index === 0) && "lg:row-span-2 lg:col-span-2 lg:border-b lg:border-l",
-                (index === 1) && "lg:row-span-2 lg:border-b",
-                (index === 2) && "lg:border-l",
-                index === 3 && "lg:col-span-2"
+                // (index === 0) && "lg:row-span-2 lg:col-span-2 lg:border-b lg:border-l",
+                // (index === 1) && "lg:row-span-2 lg:border-b",
+                // (index === 2) && "lg:border-l",
             )}
         >
             {index < 2 && (
@@ -138,18 +136,18 @@ const Feature = ({
             </div>
             <div className="text-lg font-bold mb-2 relative z-10 px-10">
                 <div className="absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-neutral-700 group-hover/feature:bg-blue-500 transition-all duration-200 origin-center" />
-                <span className={cn(`group-hover/feature:translate-x-2 transition duration-200 inline-block text-neutral-100 text-xl`,
-                    index === 0 && "lg:text-5xl",
-                    index === 1 && "lg:text-3xl",
-                    index === 3 && "lg:text-4xl",
+                <span className={cn(`group-hover/feature:translate-x-2 transition duration-200 inline-block text-neutral-100 text-xl   lg:text-3xl`,
+                    // index === 0 && "lg:text-5xl",
+                    // index === 1 && "lg:text-3xl",
+                    // index === 3 && "lg:text-4xl",
                 )}>
                     {title}
                 </span>
             </div>
-            <p className={cn("text-sm text-neutral-300 max-w-xs relative z-10 px-10 text-balance ",
-                (index === 0) && "lg:text-3xl max-w-full mt-10",
-                (index === 1) && "lg:text-3xl max-w-full mt-10",
-                (index === 3) && "lg:text-xl max-w-full ",
+            <p className={cn("text-sm text-neutral-300 max-w-xs relative z-10 px-10 text-balance lg:max-w-3xl lg:text-lg",
+                // (index === 0) && "lg:text-3xl max-w-full mt-10",
+                // (index === 1) && "lg:text-3xl max-w-full mt-10",
+                // (index === 3) && "lg:text-xl max-w-full ",
             )}>
                 {description}
             </p>

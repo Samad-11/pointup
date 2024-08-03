@@ -124,7 +124,7 @@ export const FloatingNav = ({
                         className="border font-medium relative  border-white/[0.2]  text-white  px-10 py-1 rounded-full flex justify-center items-center gap-3 
                 hover:border-[#d1ab38] transition-all
                 ">
-                        <span className=" text-[#d1ab38] ">Apply</span>
+                        <span className=" text-[#d1ab38] ">Join Now</span>
                         <span className=""><FaLongArrowAltRight size={26} className="text-[#d1ab38] " /></span>
                         <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-[#d1ab38] to-transparent  h-px" />
                     </button>
@@ -191,7 +191,7 @@ const MobileNav = ({
                             ))
                         }
                     </div>
-                    <ApplyButton buttonText={"Apply"} />
+                    <ApplyButton buttonText={"Join Now"} />
                 </aside>
             </div>
         </div>

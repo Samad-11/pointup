@@ -5,10 +5,12 @@ import { GoArrowDownRight } from 'react-icons/go'
 import { RiCustomerServiceLine } from 'react-icons/ri'
 import ApplyButton from './ui/ApplyButton'
 import Header from './ui/Header'
+import { IconCalendarDue, IconCircleDashedCheck, IconCreditCardPay, IconCrosshair } from '@tabler/icons-react'
+import { GiProgression } from 'react-icons/gi'
 
 const HomeService = () => {
     return (
-        <div id='home-service-section' className='blackGradient2 min-h-screen '>
+        <div id='services' className='blackGradient2 min-h-screen '>
             <div className='max-w-6xl mx-auto max-sm:px-4 max-sm:pb-10 '>
                 <Header>
                     <span className='flex'>
@@ -29,44 +31,44 @@ export default HomeService
 
 const items = [
     {
-        title: "Higher Reward",
-        description: "service description: text which describe the service..",
+        title: "Find your perfect card",
+        description: "Point Up guides you to the perfect card for your lifestyle by maximizing rewards and make every swipe count",
         link: "#",
-        icon: <RiCustomerServiceLine />
+        icon: <IconCircleDashedCheck />
     },
     {
-        title: "Credit Cards Suggestion",
-        description: "service description: text which describe the service..",
+        title: "Maximize credit card rewards!",
+        description: "We help you unlock hidden points, choose the right cards, and turn your spending into rewards.",
+        link: "#",
+        icon: <GiProgression />
+
+    },
+    {
+        title: "Instant Credit Card Advice",
+        description: "Our AI-powered chatbot helps you picking the right card to max rewards and personalized advice at your fingertips.",
         link: "#",
         icon: <RiCustomerServiceLine />
 
     },
     {
-        title: "Quick Response",
-        description: "service description: text which describe the service..",
+        title: "One-Stop Credit Card Command Center!",
+        description: "From card selection to maximizing rewards, and beyond, we're your go-to credit card experts. Enjoy personalized advice, masterclasses, and ongoing support – all in one place!",
         link: "#",
-        icon: <RiCustomerServiceLine />
+        icon: <IconCreditCardPay />
 
     },
     {
-        title: "Timely suggestions",
-        description: "service description: text which describe the service..",
+        title: "Never Miss a Deadline Again!",
+        description: "We'll remind you about due dates, reward point expiry, and more to avoid late fees or missed opportunities!",
         link: "#",
-        icon: <RiCustomerServiceLine />
+        icon: <IconCalendarDue />
 
     },
     {
-        title: "Live tracking",
-        description: "service description: text which describe the service..",
+        title: "Personalized Advice",
+        description: "Our experts analyze your spending habits, credit history, and goals to create a customized plan just for you. ",
         link: "#",
-        icon: <RiCustomerServiceLine />
-
-    },
-    {
-        title: "24/7 customer support",
-        description: "service description: text which describe the service..",
-        link: "#",
-        icon: <RiCustomerServiceLine />
+        icon: <IconCrosshair />
 
     },
 ]

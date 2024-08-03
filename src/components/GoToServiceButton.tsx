@@ -1,31 +1,9 @@
-'use client'
-
-import { usePathname, useRouter } from "next/navigation"
-import { useEffect, useState } from "react"
+import TransitionLink from "./TransitionLink"
 
 const GoToServiceButton = () => {
-    const pathname = usePathname()
-    const { push } = useRouter()
-    const [service, setService] = useState<HTMLElement | null>(null)
-    useEffect(() => {
-
-        setService(document.getElementById("home-service-section"))
-
-
-    }, [])
-
 
     return (
-        <button
-            onClick={() => {
-                if (pathname !== '/') {
-                    push('/')
-                }
-                if (service) {
-                    service.scrollIntoView({ behavior: "smooth" });
-                }
-            }}
-        >Our Services</button>
+        <TransitionLink href="/#services" scroll >Our Services</TransitionLink>
     )
 }
 
