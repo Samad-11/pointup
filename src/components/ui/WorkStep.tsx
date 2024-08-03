@@ -20,7 +20,7 @@ const WorkStep = () => {
             image: _1img
         },
         {
-            title: "We guide you with maximising your reward points",
+            title: "We guide you in maximising your reward points",
             description:
                 "Reward points can be maximised by hitting the milestone benefits, using reward multiplier schemes, transferring points to partner hotels / airlines during offer period. We constantly guide - what action is to be taken when - so that you can just on spending!",
             image: _2img
@@ -85,11 +85,13 @@ const Step = ({ title, description, image, sno }: { title: string, description: 
                             lg:text-5xl
                             md:4xl
                             sm:3xl
-                            pb-5 text-left font-poppins'>
+                            pb-5  w-full text-left font-poppins'>
                                 <span className='lg:text-6xl
                                 md:text-5xl
                                 sm:text-4xl
                                 text-3xl
+
+                                
                                 '>{sno}.</span>
                                 {title}
                             </h4>
@@ -133,11 +135,11 @@ const Step = ({ title, description, image, sno }: { title: string, description: 
                             lg:text-5xl
                             md:4xl
                             sm:3xl
-                            pb-5 text-left font-poppins'>
+                            pb-5  text-left font-poppins'>
                                 <span className='lg:text-6xl
                                 md:text-5xl
                                 sm:text-4xl
-                                                                text-3xl
+                                text-3xl
 
                                 '>{sno}.</span>
                                 {title}

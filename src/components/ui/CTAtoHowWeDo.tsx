@@ -31,7 +31,7 @@ const CTAtoHowWeDo = () => {
             hover:scale-105 transition-transform
             '>
             <Header classname='sm:text-lg pb-0 from-black to-slate-800 text-sm'>
-                Our Service
+                Our Services
             </Header>
             <span><BiDownArrow className='text-black' /></span>
         </button>

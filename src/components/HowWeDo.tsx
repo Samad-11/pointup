@@ -13,7 +13,7 @@ const HowWeDo = () => {
                 </Header>
                 <WorkStep />
                 <div className='pt-10 sm:pt-16 flex justify-end'>
-                    <ApplyButton buttonText={"Join our journey now"} />
+                    <ApplyButton buttonText={"Join Now"} />
                 </div>
             </div>
         </div>

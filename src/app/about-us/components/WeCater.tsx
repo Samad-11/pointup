@@ -13,7 +13,7 @@ const WeCater = () => {
           
             '>
                 <div className='w-fit space-y-3 mx-auto'>
-                    <p >We Cater for everyone</p>
+                    <p >We Cater to everyone</p>
                     <div className='p-[2px] w-full bg-white rounded-full'></div>
                 </div>
             </Header>

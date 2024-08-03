@@ -18,12 +18,12 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         //     link: "/service"
         // },
         {
-            name: "Contact Us",
-            link: "/contact"
-        },
-        {
             name: "Blog",
             link: "/blog"
+        },
+        {
+            name: "Contact Us",
+            link: "/contact"
         },
         // {
         //     name: "FAQs",

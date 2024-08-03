@@ -56,9 +56,9 @@ const Hero = () => {
                     <div className='self-end max-w-sm '>
 
                         <p className="text-3xl max-sm:max-w-xs sm:text-3xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200   to-neutral-500 py-8">
-                            Unlock the Travel You Deserve with Point Up
+                            Unlock the Benefits You Deserve with Point Up
                         </p>
-                        <p className='text-primary py-2 text-sm sm:text-base 
+                        <p className='text-golden/75 py-2 text-sm sm:text-base 
                         font-fauna
                         '>
                             Stop missing out on valuable rewards. We help you maximize your credit card points and book amazing travel experiences.
@@ -100,11 +100,11 @@ const Hero = () => {
                         shadow-black shadow-lg 
                         absolute
                         object-contain
-                        right-0
+                        right-1
                         -top-5
                     "
-                        width={300}
-                        height={300}
+                        width={200}
+                        height={100}
                     />
                 </div>
                 <div className='flex-1 relative  h-full w-full max-sm:hidden'>

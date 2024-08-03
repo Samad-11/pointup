@@ -111,7 +111,7 @@ export const FloatingNav = ({
                                 key={`link=${idx}`}
                                 href={navItem.link}
                                 className={cn(
-                                    "relative dark:text-neutral-50 items-center flex space-x-1 text-white dark:hover:text-neutral-300 hover:text-[#d1ab38] hover:underline underline-offset-4 dark:hover:no-underline"
+                                    "relative text-neutral-50 items-center flex space-x-1  hover:text-neutral-300   underline-offset-4 hover:no-underline"
                                 )}
                             >
                                 <span className="block sm:hidden">{navItem.icon}</span>
@@ -121,11 +121,11 @@ export const FloatingNav = ({
                     </div>
                     <button
                         onClick={onClickHandle}
-                        className="border font-medium relative  dark:border-white/[0.2] border-black/[0.5] dark:text-white  px-10 py-1 rounded-full flex justify-center items-center gap-3 
+                        className="border font-medium relative  border-white/[0.2]  text-white  px-10 py-1 rounded-full flex justify-center items-center gap-3 
                 hover:border-[#d1ab38] transition-all
                 ">
-                        <span className="text-neutral-800 dark:text-[#d1ab38] ">Apply</span>
-                        <span className=""><FaLongArrowAltRight size={26} className="text-neutral-800 dark:text-[#d1ab38] " /></span>
+                        <span className=" text-[#d1ab38] ">Apply</span>
+                        <span className=""><FaLongArrowAltRight size={26} className="text-[#d1ab38] " /></span>
                         <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-[#d1ab38] to-transparent  h-px" />
                     </button>
                 </motion.div>

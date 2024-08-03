@@ -17,7 +17,7 @@ const Hero = () => {
                     '>
                         <Header classname='sm:text-7xl 
                         text-left
-                        max-sm:pt-52
+                        max-sm:pt-28
                         max-sm:max-w-xs
                         max-sm:pb-3
                         font-poppins
@@ -45,7 +45,7 @@ const Hero = () => {
                     <Image
                         src={mascot}
                         alt='mascot'
-                        className='sm:hidden absolute bottom-0 size-96 object-cover' />
+                        className='sm:hidden absolute bottom-0 size-80 object-cover' />
                 </div>
             </div>
         </div>

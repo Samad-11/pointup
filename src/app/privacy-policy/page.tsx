@@ -10,7 +10,7 @@ const PrivacyPolicyPage = () => {
                     Privacy Policy
                 </Header>
                 <div className='space-y-10 text-primary pb-10'>
-                    <p>Last updated on March 21st, 2023</p>
+                    <p>Last updated on August 03rd, 2024</p>
                     <p>We at Point Up (“the Company/Point Up/We/Us”) are committed to protecting the privacy and security of your personal information. Your privacy is important to us and maintaining your trust is paramount.
                     </p>
                     <p>This Privacy Policy explains how we collect, use, process and disclose information about you. By using our website/app, you consent to the terms of our privacy policy (“Privacy Policy”) in addition to our Terms of Use. We encourage you to read this Privacy Policy regarding the collection, use, and disclosure of your information from time to time to keep yourself updated with the changes & updated that we make to this Policy.

@@ -38,16 +38,16 @@ export function ContactForm() {
                 <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
                     <LabelInputContainer>
                         <Label htmlFor="firstname">First name</Label>
-                        <Input id="firstname" placeholder="Anmol" type="text" required />
+                        <Input id="firstname" placeholder="Ayushman" type="text" required />
                     </LabelInputContainer>
                     <LabelInputContainer>
                         <Label htmlFor="lastname">Last name</Label>
-                        <Input id="lastname" placeholder="Bhatia" type="text" required />
+                        <Input id="lastname" placeholder="Dubey" type="text" required />
                     </LabelInputContainer>
                 </div>
                 <LabelInputContainer className="mb-4">
                     <Label htmlFor="email">Email Address</Label>
-                    <Input id="email" placeholder="pointupreward@mail.com" type="email" required />
+                    <Input id="email" placeholder="ayushmandubeydu@mail.com" type="email" required />
                 </LabelInputContainer>
                 <LabelInputContainer className="mb-10">
                     <Label htmlFor="query">Query</Label>
