@@ -3,7 +3,7 @@ import TransitionLink from "./TransitionLink"
 const GoToServiceButton = () => {
 
     return (
-        <TransitionLink href="/#services" scroll >Our Services</TransitionLink>
+        <TransitionLink href="/#services" scroll  >Our Services</TransitionLink>
     )
 }
 
