@@ -33,14 +33,14 @@ export const BentoGridItem = ({
     image
 }: {
     className?: string;
-    title?: string | React.ReactNode;
-    description?: string | React.ReactNode;
+    title?: string;
+    description?: string;
     header?: React.ReactNode;
     icon?: React.ReactNode;
     image: StaticImageData
 }) => {
     return (
-        <TransitionLink href={`/blog/${title}-${description}`}
+        <TransitionLink href={`/blog/${title?.replaceAll(" ", "-")}-${description?.replaceAll(" ", "-")}`}
             className={cn(
                 "row-span-1 rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-none p-4 bg-black border-white/[0.2]  border  justify-between flex flex-col space-y-4",
                 className

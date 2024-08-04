@@ -8,14 +8,14 @@ import { Metadata } from 'next'
 export async function generateStaticParams() {
     const data = blogs
     return data.map((item) => ({
-        slug: item.title + "-" + item.description,
+        slug: item.title.replaceAll(" ", "-") + "-" + item.description.replaceAll(" ", "-"),
     }))
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
     const slug = params.slug
     const plainText = decodeURIComponent(slug)
-    const blog = blogs.find((blog) => plainText === (`${blog.title}-${blog.description}`))
+    const blog = blogs.find((blog) => plainText === (`${blog.title.replaceAll(" ", "-")}-${blog.description.replaceAll(" ", "-")}`))
     if (!blog) return {}
     return {
         title: blog.title,
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 const BlogDetailPage = ({ params }: { params: { slug: string } }) => {
     const { slug } = params
     const plainText = decodeURIComponent(slug)
-    const blog = blogs.find((blog) => plainText === (`${blog.title}-${blog.description}`))
+    const blog = blogs.find((blog) => plainText === (`${blog.title.replaceAll(" ", "-")}-${blog.description.replaceAll(" ", "-")}`))
     if (!blog) {
         return <div>Blog not found</div>
     }
