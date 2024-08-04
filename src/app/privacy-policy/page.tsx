@@ -1,6 +1,12 @@
 import Header from '@/components/ui/Header'
 import React from 'react'
 import Policies from './Policies'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: "Privacy Policy"
+}
+
 
 const PrivacyPolicyPage = () => {
     return (
