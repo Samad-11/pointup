@@ -31,7 +31,7 @@ export const FloatingNav = ({
     const { scrollYProgress } = useScroll();
     const [visible, setVisible] = useState(true);
     const [bgBlack, setBgBlack] = useState(false)
-
+    const pathname = usePathname()
     const router = useRouter();
     const onClickHandle = () => {
         router.push("https://wa.me/919999275769?text=I'm%20interested%20in%20your%20service")
@@ -98,20 +98,23 @@ export const FloatingNav = ({
                         }
                     )}
                 >
-                    <div className={``}>
+                    <Link href={'/'} className={``}>
                         <Image
                             height={115}
                             width={115}
                             className={``}
                             src={logo} alt="logo" />
-                    </div>
+                    </Link>
                     <div className="gap-x-9">
                         {navItems.map((navItem: any, idx: number) => (
                             <TransitionLink
                                 key={`link=${idx}`}
                                 href={navItem.link}
                                 className={cn(
-                                    "relative text-neutral-50 items-center flex space-x-1  hover:text-neutral-300   underline-offset-4 hover:no-underline"
+                                    "relative text-neutral-50 items-center flex space-x-1  hover:text-golden/60   underline-offset-4 hover:no-underline",
+                                    {
+                                        "text-golden font-semibold": pathname === navItem.link
+                                    }
                                 )}
                             >
                                 <span className="block sm:hidden">{navItem.icon}</span>
@@ -170,11 +173,13 @@ const MobileNav = ({
                 <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay" onClick={() => { setIsOpen(false) }}></label>
                 <aside className="menu  p-4 w-[50vw] h-screen bg-accent text-accent-content border-r-2 border-r-gray-600 font-kalam">
                     {/* Sidebar content here */}
-                    <div>
+                    <Link
+                        href={"/"}
+                    >
                         <Image
 
                             src={logo} alt="point up logo" height={60} width={60} />
-                    </div>
+                    </Link>
                     <div className="flex flex-col gap-4 mt-10 mb-5">
                         {
                             navItems.map((item, indx) => (

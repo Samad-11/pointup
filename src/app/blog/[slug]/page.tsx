@@ -2,6 +2,7 @@ import Header from '@/components/ui/Header'
 import Image from 'next/image'
 import React from 'react'
 import { blogs } from '@/utils/staticBlogs'
+import { Metadata } from 'next'
 
 
 export async function generateStaticParams() {
@@ -9,6 +10,20 @@ export async function generateStaticParams() {
     return data.map((item) => ({
         slug: item.title + "-" + item.description,
     }))
+}
+
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+    const slug = params.slug
+    const plainText = decodeURIComponent(slug)
+    const blog = blogs.find((blog) => plainText === (`${blog.title}-${blog.description}`))
+    if (!blog) return {}
+    return {
+        title: blog.title,
+        description: blog.description,
+        openGraph: {
+            images: [`${process.env.BASE_URL}/${blog.image.src}`]
+        }
+    }
 }
 
 

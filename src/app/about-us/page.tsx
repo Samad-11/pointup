@@ -4,6 +4,12 @@ import JoinNow from './components/JoinNow'
 import WeCater from './components/WeCater'
 import HowWeHelp from './components/HowWeHelp'
 import Container from '@/components/Container'
+import { Metadata } from 'next'
+
+
+export const metadata: Metadata = {
+    title: "About Us"
+}
 
 const AboutPage = () => {
     return (

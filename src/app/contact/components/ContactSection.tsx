@@ -6,6 +6,7 @@ import { FiPhone } from 'react-icons/fi'
 import { CiMail } from 'react-icons/ci'
 import Link from 'next/link'
 import { FaXTwitter } from 'react-icons/fa6'
+import { PHONE_NUMBER, SUPPORT_EMAIL } from '@/lib/constants'
 
 const ContactSection = () => {
     return (
@@ -24,7 +25,7 @@ const ContactSection = () => {
                         </div> */}
                         <div className='flex  justify-center items-center gap-5 hover:link group '>
                             <FiPhone className='group-hover:text-white' />
-                            <Link href={'tel:+919205392989'} className='font-extralight group-hover:font-semibold'>+91 92053 92989</Link>
+                            <Link href={`tel:${PHONE_NUMBER}`} className='font-extralight group-hover:font-semibold'>+91 92053 92989</Link>
                         </div>
                         {/* <div className='flex  justify-center items-center gap-5 hover:link group '>
                             <FaWhatsapp className='group-hover:text-white' />
@@ -32,7 +33,7 @@ const ContactSection = () => {
                         </div> */}
                         <div className='flex  justify-center items-center gap-5 hover:link group '>
                             <CiMail className='group-hover:text-white' />
-                            <Link target='_blank' href={'mailto:service@pointup.com'} className='font-extralight group-hover:font-semibold'>admin@pointup.com</Link>
+                            <Link target='_blank' href={`mailto:${SUPPORT_EMAIL}`} className='font-extralight group-hover:font-semibold'>{SUPPORT_EMAIL}</Link>
                         </div>
 
                         <div className='mt-10'>

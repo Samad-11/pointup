@@ -2,17 +2,14 @@ import React from 'react'
 import cardsImg from '../../public/images/heroImage/new.png'
 import Image from 'next/image'
 import { AnimatedTooltip } from './ui/Tooltip'
-import { TbTransactionRupee } from 'react-icons/tb'
 import { VscWorkspaceTrusted } from 'react-icons/vsc'
 import { GrTransaction } from 'react-icons/gr'
 import { FaLongArrowAltRight } from 'react-icons/fa'
 import { Spotlight } from './Spotlight'
 import MobileLogo from './ui/MobileLogo'
-import Header from './ui/Header'
-import { BiDownArrow } from 'react-icons/bi'
 import CTAtoHowWeDo from './ui/CTAtoHowWeDo'
-import Logo from './ui/Logo'
 import Link from 'next/link'
+import { WHATSAPP_MESSAGE, WHATSAPP_NUMBER } from '@/lib/constants'
 const Hero = () => {
     const people = [
         {
@@ -49,9 +46,6 @@ const Hero = () => {
             <div className='flex  items-center justify-center sm:px-10 h-screen
         max-sm:flex-col'>
                 <MobileLogo />
-                {/* <Logo /> */}
-
-
                 <div className='flex-1 flex justify-center sm:px-10 px-5 max-sm:pt-20 pt-20'>
                     <div className='self-end max-w-sm '>
 
@@ -64,7 +58,7 @@ const Hero = () => {
                             Stop missing out on valuable rewards. We help you maximize your credit card points and book amazing travel experiences.
                         </p>
                         <div className='my-6 sm:mb-8 sm:mt-5 flex justify-between max-sm:flex-col max-sm:gap-y-4 max-sm:pt-8'>
-                            <Link href="https://wa.me/919999275769?text=I'm%20interested%20in%20your%20ser" className="border font-medium relative border-white/[0.2] text-white 
+                            <Link href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`} className="border font-medium relative border-white/[0.2] text-white 
                         px-5 sm:px-4 py-1 rounded-full flex justify-center items-center gap-3
                         max-sm:border-[#d1ab38]
                         ">

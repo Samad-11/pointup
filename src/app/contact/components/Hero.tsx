@@ -5,6 +5,7 @@ import Image from 'next/image'
 import MobileLogo from '@/components/ui/MobileLogo'
 import Link from 'next/link'
 import { FaArrowUpRightDots } from 'react-icons/fa6'
+import { WHATSAPP_MESSAGE, WHATSAPP_NUMBER } from '@/lib/constants'
 const Hero = () => {
     return (
         <div className="hero min-h-screen bg-fixed" style={{ backgroundImage: 'url(images/heroImage/about-hero-bg.jpg)' }}>
@@ -24,8 +25,8 @@ const Hero = () => {
                         '>
                             Let&apos;s work together
                         </Header>
-                        <Link href={"https://wa.me/919999275769?text=I'm%20interested%20in%20your%20ser"}
-                            className='flex justify-start items-center sm:gap-1  link link-hover 
+                        <Link href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
+                            className='flex justify-start items-center gap-1  link link-hover 
                         text-base-200 text-left
                         font font-extrabold
                         sm:text-4xl

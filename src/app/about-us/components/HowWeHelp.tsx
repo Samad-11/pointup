@@ -1,18 +1,10 @@
 import React from 'react'
 
 import {
-    IconAdjustmentsBolt,
     IconChartBar,
-    IconCloud,
     IconCrosshair,
-    IconCurrencyDollar,
     IconCurrentLocation,
-    IconEaseInOut,
-    IconHeart,
-    IconHelp,
     IconRobot,
-    IconRouteAltLeft,
-    IconTerminal2,
 } from "@tabler/icons-react";
 import { cn } from '@/utils/cn';
 import Header from '@/components/ui/Header';

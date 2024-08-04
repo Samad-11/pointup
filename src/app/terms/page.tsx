@@ -1,6 +1,12 @@
 import Header from '@/components/ui/Header'
 import React from 'react'
 import Terms from './AllTerms'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: "Terms"
+}
+
 
 const TermPage = () => {
     return (

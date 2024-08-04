@@ -2,6 +2,12 @@ import React from 'react'
 import { BlogSection } from './BlogSection'
 import Hero from './Hero'
 import Header from '@/components/ui/Header'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: "Blogs"
+}
+
 
 const page = () => {
     return (
