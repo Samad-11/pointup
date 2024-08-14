@@ -7,7 +7,7 @@ const ParallaxBG = () => {
             <div className="hero-overlay bg-opacity-90"></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-lg">
-                    <h1 className="mb-5 text-5xl font-bold">Unlock the limitless possibilities</h1>
+                    <h3 className="mb-5 text-5xl font-bold">Unlock the limitless possibilities</h3>
                     {/* <p className="mb-5 font-fauna">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis fuga corrupti at commodi ducimus necessitatibus architecto laboriosam reiciendis maiores dolorem!</p> */}
                     <div className='flex justify-center items-center'>
                         <ApplyButton buttonText={"Join Now"} />

@@ -9,7 +9,7 @@ import { Spotlight } from './Spotlight'
 import MobileLogo from './ui/MobileLogo'
 import CTAtoHowWeDo from './ui/CTAtoHowWeDo'
 import Link from 'next/link'
-import { WHATSAPP_MESSAGE, WHATSAPP_NUMBER } from '@/lib/constants'
+import { WHATSAPP_API_NUMBER, WHATSAPP_MESSAGE } from '@/lib/constants'
 const Hero = () => {
     const people = [
         {
@@ -49,16 +49,18 @@ const Hero = () => {
                 <div className='flex-1 flex justify-center sm:px-10 px-5 max-sm:pt-20 pt-20'>
                     <div className='self-end max-w-sm '>
 
-                        <p className="text-3xl max-sm:max-w-xs sm:text-3xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200   to-neutral-500 py-8">
+                        <h1 className="text-3xl max-sm:max-w-xs sm:text-3xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200   to-neutral-500 py-8">
                             Unlock the Benefits You Deserve with Point Up
-                        </p>
+                        </h1>
                         <p className='text-golden/75 py-2 text-sm sm:text-base 
                         font-fauna
                         '>
                             Stop missing out on valuable rewards. We help you maximize your credit card points and book amazing travel experiences.
                         </p>
                         <div className='my-6 sm:mb-8 sm:mt-5 flex justify-between max-sm:flex-col max-sm:gap-y-4 max-sm:pt-8'>
-                            <Link href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`} className="border font-medium relative border-white/[0.2] text-white 
+                            <Link href={`https://wa.me/${WHATSAPP_API_NUMBER}?text=${WHATSAPP_MESSAGE}`}
+                                title='Point Up Chat'
+                                className="border font-medium relative border-white/[0.2] text-white 
                         px-5 sm:px-4 py-1 rounded-full flex justify-center items-center gap-3
                         max-sm:border-[#d1ab38]
                         ">

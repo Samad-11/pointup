@@ -15,6 +15,7 @@ import { IoMdClose, IoMdMenu } from "react-icons/io";
 import ApplyButton from "./ApplyButton";
 import { usePathname, useRouter } from "next/navigation";
 import TransitionLink from "../TransitionLink";
+import { WHATSAPP_API_NUMBER, WHATSAPP_MESSAGE } from "@/lib/constants";
 
 export const FloatingNav = ({
     navItems,
@@ -32,10 +33,10 @@ export const FloatingNav = ({
     const [visible, setVisible] = useState(true);
     const [bgBlack, setBgBlack] = useState(false)
     const pathname = usePathname()
-    const router = useRouter();
-    const onClickHandle = () => {
-        router.push("https://wa.me/919999275769?text=I'm%20interested%20in%20your%20service")
-    }
+    // const router = useRouter();
+    // const onClickHandle = () => {
+    //     router.push("https://wa.me/919999275769?text=I'm%20interested%20in%20your%20service")
+    // }
 
 
 
@@ -122,15 +123,17 @@ export const FloatingNav = ({
                             </TransitionLink>
                         ))}
                     </div>
-                    <button
-                        onClick={onClickHandle}
+                    <Link
+                        href={`https://wa.me/${WHATSAPP_API_NUMBER}?text=${WHATSAPP_MESSAGE}`}
+                        target="_self"
+                        title="Point Up Chat"
                         className="border font-medium relative  border-white/[0.2]  text-white  px-10 py-1 rounded-full flex justify-center items-center gap-3 
                 hover:border-[#d1ab38] transition-all
                 ">
                         <span className=" text-[#d1ab38] ">Join Now</span>
                         <span className=""><FaLongArrowAltRight size={26} className="text-[#d1ab38] " /></span>
                         <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-[#d1ab38] to-transparent  h-px" />
-                    </button>
+                    </Link>
                 </motion.div>
             </AnimatePresence>
             <MobileNav navItems={navItems} />

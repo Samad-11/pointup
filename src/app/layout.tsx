@@ -10,16 +10,16 @@ const poppins = Poppins({ subsets: ['latin', 'latin-ext'], weight: ['900', '800'
 
 export const metadata: Metadata = {
   title: {
-    default: "Point Up - Earn while Spending",
-    template: "%s | Point Up - Earn While Spending",
+    default: "Point Up - Earn while Spending - Stop missing out on valuable rewards",
+    template: "%s | Point Up - Earn While Spending - Stop missing out on valuable rewards",
   },
-  description: "Unlock the Benefits You Deserve with Point Up - Stop missing out on valuable rewards. We help you maximize your credit card points and book amazing travel experiences.",
+  description: "Unlock the Benefits You Deserve with Point Up. We help you maximize your credit card points and book amazing travel experiences.",
   applicationName: "Point Up",
   creator: "Abdus Samad",
   openGraph: {
     title: "Point Up",
-    description: "Unlock the Benefits You Deserve with Point Up - Stop missing out on valuable rewards. We help you maximize your credit card points and book amazing travel experiences.",
-    url: process.env.BASE_URL || "https://pointup.vercel.app",
+    description: "Unlock the Benefits You Deserve with Point Up. We help you maximize your credit card points and book amazing travel experiences.",
+    url: process.env.BASE_URL || "https://pointup.co.in",
     siteName: "Point Up",
     type: "website",
     images: [
