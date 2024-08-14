@@ -8,7 +8,7 @@ const ApplyButton = ({ buttonText }: { buttonText: String }) => {
   
     return (
         <Link
-            target='_top'
+            target='_blank'
             href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
             
             className="border font-medium relative border-white/[0.2] text-white px-10 py-1 rounded-full flex justify-center items-center gap-3 max-w-full">
