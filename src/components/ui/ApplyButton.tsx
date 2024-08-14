@@ -3,7 +3,7 @@ import { WHATSAPP_MESSAGE, WHATSAPP_NUMBER } from '@/lib/constants'
 import Link from 'next/link'
 import React from 'react'
 import { FaLongArrowAltRight } from 'react-icons/fa'
-import {useRouter} from 'next-navigation'
+import {useRouter} from 'next/navigation'
 
 const ApplyButton = ({ buttonText }: { buttonText: String }) => {
   const {push} = useRouter()
