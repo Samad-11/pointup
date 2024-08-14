@@ -1,15 +1,11 @@
-'use client'
+
 import { WHATSAPP_MESSAGE, WHATSAPP_NUMBER } from '@/lib/constants'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
 import React from 'react'
 import { FaLongArrowAltRight } from 'react-icons/fa'
 
 const ApplyButton = ({ buttonText }: { buttonText: String }) => {
-    const router = useRouter()
-    const onClickHandle = () => {
-        router.push("https://wa.me/919999275769?text=I%am%20interested%20in%20your%20service")
-    }
+  
     return (
         <Link
             target='_top'
