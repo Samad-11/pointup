@@ -34,6 +34,7 @@ const TransitionLink = ({ children, href, className, ...props }: TransitionLinkP
     }
     return (
         <Link
+            rel='alternate'
             onClick={onTransitionLinkClick}
             href={href} className={cn(className)} {...props}>{children}</Link>
     )

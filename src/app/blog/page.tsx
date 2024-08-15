@@ -3,6 +3,7 @@ import { BlogSection } from './BlogSection'
 import Hero from './Hero'
 import Header from '@/components/ui/Header'
 import { Metadata } from 'next'
+import { Blog, WithContext } from "schema-dts"
 
 export const metadata: Metadata = {
     title: "Blogs"
@@ -10,6 +11,12 @@ export const metadata: Metadata = {
 
 
 const page = () => {
+    const jsonLd: WithContext<Blog> = {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "@id": "Blog Page",
+        about: "All the blogs posts are here"
+    }
     return (
         <div className='relative'>
             <Hero />
@@ -20,7 +27,10 @@ const page = () => {
                     Latest Blog Posts
                 </Header>
                 <BlogSection />
+
             </div>
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+
         </div>
 
     )

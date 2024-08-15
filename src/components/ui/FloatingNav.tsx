@@ -126,6 +126,7 @@ export const FloatingNav = ({
                     <Link
                         href={`https://wa.me/${WHATSAPP_API_NUMBER}?text=${WHATSAPP_MESSAGE}`}
                         target="_self"
+                        rel="external"
                         title="Point Up Chat"
                         className="border font-medium relative  border-white/[0.2]  text-white  px-10 py-1 rounded-full flex justify-center items-center gap-3 
                 hover:border-[#d1ab38] transition-all
