@@ -32,7 +32,7 @@ const BlogDetailPage = ({ params }: { params: { slug: string } }) => {
 
     const jsonLd: WithContext<BlogPosting> = {
 
-        "@context": "https://schema.org".,
+        "@context": "https://schema.org",
         "@type": "BlogPosting",
         "@id": params.slug,
         name: params.slug
