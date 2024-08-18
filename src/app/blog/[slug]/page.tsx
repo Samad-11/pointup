@@ -4,12 +4,13 @@ import React from 'react'
 import { blogs } from '@/utils/staticBlogs'
 import { Metadata } from 'next'
 import { WithContext, BlogPosting } from 'schema-dts'
+import { slugify } from '@/utils/helpers'
 
 
 export async function generateStaticParams() {
     const data = blogs
     return data.map((item) => ({
-        slug: item.title.replaceAll(" ", "-") + "-" + item.description.replaceAll(" ", "-"),
+        slug: slugify(item.title),
     }))
 }
 
@@ -40,8 +41,9 @@ const BlogDetailPage = ({ params }: { params: { slug: string } }) => {
 
 
     const { slug } = params
-    const plainText = decodeURIComponent(slug)
-    const blog = blogs.find((blog) => plainText === (`${blog.title.replaceAll(" ", "-")}-${blog.description.replaceAll(" ", "-")}`))
+    console.log(slug);
+
+    const blog = blogs.find((blog) => slug === slugify(blog.title))
     if (!blog) {
         return <div>Blog not found</div>
     }

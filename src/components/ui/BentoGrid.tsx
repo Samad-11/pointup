@@ -3,6 +3,7 @@ import Link from "next/link";
 import TransitionLink from "../TransitionLink";
 import Image, { StaticImageData } from "next/image";
 import { Suspense } from "react";
+import { slugify } from "@/utils/helpers";
 
 
 export const BentoGrid = ({
@@ -40,7 +41,7 @@ export const BentoGridItem = ({
     image: StaticImageData
 }) => {
     return (
-        <TransitionLink href={`/blog/${title?.replaceAll(" ", "-")}-${description?.replaceAll(" ", "-")}`}
+        <TransitionLink href={`/blog/${slugify(title || "")}`}
             className={cn(
                 "row-span-1 rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-none p-4 bg-black border-white/[0.2]  border  justify-between flex flex-col space-y-4",
                 className
